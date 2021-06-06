@@ -1,0 +1,161 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <h1 class="col-md-12 col-sm-12 col-xs-12 m-3 text-center">
+      Ajouter Groupe
+    </h1>
+    <div id="div1" class="col-md-5 col-sm-12 col-xs-12">
+      <label class="fw-bold">Programme:</label>
+      <div class="input-group justify-content-center">
+        <span id="span" class="input-group-text" id="basic-addon1">
+          <i class="fa fa-book icon"></i>
+        </span>
+        <select id="select" class="form-control">
+          <option
+            *ngFor="let Programme of ListProgramme"
+            id="{{ Programme.Intitule }}"
+          >
+            {{ Programme.Intitule }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div id="div2" class="col-md-5 col-sm-12 col-xs-12">
+      <label class="fw-bold">Nom du groupe:</label>
+      <div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-tag icon"></i
+          ></span>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Nom"
+            (keyup)="onkeyup($event)"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 text-center my-4">
+      <input
+        type="button"
+        (click)="Ajouter()"
+        class="btn btn-primary fw-bold"
+        value="Ajouter"
+      />
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="gro">
+        <div class="container">
+          <div class="row">
+            <h1 class="col-md-12 col-sm-12 col-xs-12 text-center my-3">
+              Liste des Groupes
+            </h1>
+          </div>
+          <div id="List" class="">
+            <div
+              class="carte text-center grouplistElem"
+              *ngFor="let groupe of listGroup"
+            >
+              <img
+                id="{{ groupe.Id }}"
+                src="../../../../assets/img/imgsys/icons/close.png"
+                class="closeS"
+                (click)="Supprimer($event)"
+              />
+              <label class="fw-bold groupname">{{
+                groupe.Programme.Intitule + groupe.Libelle
+              }}</label>
+
+              <label class="blk"
+                ><b class="">Nombre d'élèves : </b>
+                {{ groupe.NumberEleve }}</label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="groupmembers" style="display: none"></div>
+</div>
+<!-- Version 2 -->
+<!-- <div class="container">
+  <div class="row justify-content-center">
+    <h1 class="col-md-12 col-sm-12 col-xs-12 m-3 text-center">
+      Ajouter Groupe
+    </h1>
+    <div id="div1" class="col-md-6 col-sm-12 col-xs-12">
+      <label class="fw-bold">Programme:</label>
+      <div class="input-group justify-content-center">
+        <span id="span" class="input-group-text" id="basic-addon1">
+          <i class="fa fa-book icon"></i>
+        </span>
+        <select id="select" class="form-control">
+          <option
+            *ngFor="let Programme of ListProgramme"
+            id="{{ Programme.Intitule }}"
+          >
+            {{ Programme.Intitule }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div id="div2" class="col-md-6 col-sm-12 col-xs-12">
+      <label class="fw-bold">Nom du groupe:</label>
+      <div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-tag icon"></i
+          ></span>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Nom"
+            (keyup)="onkeyup($event)"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 text-center my-4 inputs1 cent">
+      <input
+        type="button"
+        (click)="Ajouter()"
+        class="btn btn-primary fw-bold"
+        value="Ajouter"
+      />
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="gro">
+        <div class="container">
+          <div class="row">
+            <h1 class="col-md-12 col-sm-12 col-xs-12 text-center my-3">
+              Liste des Groupes
+            </h1>
+          </div>
+          <div id="List" class="">
+            <div
+              class="carte text-center grouplistElem"
+              *ngFor="let groupe of listGroup"
+            >
+              <img
+                id="{{ groupe.Id }}"
+                src="../../../../assets/img/imgsys/icons/close.png"
+                class="closeS"
+                (click)="Supprimer($event)"
+              />
+              <label class="fw-bold groupname">{{
+                groupe.Programme.Intitule + groupe.Libelle
+              }}</label>
+
+              <label class="blk"
+                ><b class="">Nombre d'élèves : </b>
+                {{ groupe.NumberEleve }}</label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="groupmembers" style="display: none"></div>
+</div> -->

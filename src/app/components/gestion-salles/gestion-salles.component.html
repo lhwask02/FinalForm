@@ -1,0 +1,148 @@
+<div class="container">
+  <form>
+    <div id="content" class="row justify-content-center">
+      <h1 class="col-md-12 col-sm-12 col-xs-12 m-3 text-center">
+        Ajouter Salle
+      </h1>
+      <div id="div1" class="col-md-4 col-sm-12 col-xs-12">
+        <label class="fw-bold">Libelle :</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-book icon"></i>
+          </span>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Libelle"
+            (keyup)="onkeyup($event)"
+          />
+        </div>
+      </div>
+      <div id="div2" class="col-md-4 col-sm-12 col-xs-12">
+        <label class="fw-bold">Type :</label>
+        <div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">
+              <i class="fa fa-tag icon"></i
+            ></span>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Type"
+              (keyup)="onkeyup($event)"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12 text-center my-4">
+        <input
+          type="button"
+          (click)="Ajouter()"
+          class="btn btn-primary fw-bold 1 cent"
+          value="AJOUTER"
+          id="submit"
+        />
+      </div>
+      <h1 class="col-md-12 col-sm-12 col-xs-12 text-center my-3">
+        Liste des Salles
+      </h1>
+      <div id="" class="col-md-10 col-sm-12 col-xs-12">
+        <table class="table table-striped table-hover text-center">
+          <thead class="bg-primary">
+            <tr>
+              <th>Libelle</th>
+              <th>Type</th>
+              <th>Supprimer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let salle of ListSalle">
+              <td>{{ salle.Libelle }}</td>
+              <td>{{ salle.Type }}</td>
+              <td>
+                <img
+                  (click)="Supprimer(salle.Id)"
+                  class="delete"
+                  src="../../../../assets/img/imgsys/icons/delete.png"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- V2 -->
+<!-- <div class="container">
+  <form>
+    <div id="content" class="row justify-content-center">
+      <h1 class="col-md-12 col-sm-12 col-xs-12 m-3 text-center">
+        Ajouter Salle
+      </h1>
+      <div id="div1" class="col-md-4 col-sm-12 col-xs-12   ">
+        <label class="fw-bold">Libelle :</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-book icon"></i>
+          </span>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Libelle"
+            (keyup)="onkeyup($event)"
+          />
+        </div>
+      </div>
+      <div id="div2" class="col-md-4 col-sm-12 col-xs-12   ">
+        <label class="fw-bold">Type :</label>
+        <div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">
+              <i class="fa fa-tag icon"></i
+            ></span>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Type"
+              (keyup)="onkeyup($event)"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12 text-center my-4">
+        <input
+          type="button"
+          (click)="Ajouter()"
+          class="btn btn-primary fw-bold   1 cent"
+          value="AJOUTER"
+          id="submit"
+        />
+      </div>
+      <h1 class="col-md-12 col-sm-12 col-xs-12 text-center my-3">
+        Liste des Salles
+      </h1>
+      <div id="list" class="liste col-md-10 col-sm-12 col-xs-12">
+        <table class="table text-center">
+          <tr>
+            <th>Libelle</th>
+            <th>Type</th>
+            <th>Supprimer</th>
+          </tr>
+          <tr *ngFor="let salle of ListSalle">
+            <td>{{ salle.Libelle }}</td>
+            <td>{{ salle.Type }}</td>
+            <td>
+              <img
+                (click)="Supprimer(salle.Id)"
+                class="delete"
+                src="../../../../assets/img/imgsys/icons/delete.png"
+              />
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </form>
+</div> -->

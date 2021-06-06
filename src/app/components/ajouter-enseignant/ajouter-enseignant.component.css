@@ -1,0 +1,14 @@
+img
+{
+    border: 1px solid lightblue;
+    width: 150px;
+    height: 125px;
+}
+
+i:hover{
+cursor: pointer;
+}
+.Sel
+{
+    display: inline;
+}

@@ -1,0 +1,414 @@
+<form method="" class="">
+  <div id=" " class="row justify-content-center">
+    <h1 class="col-md-12 col-sm-12 col-xs-12 text-center my-3">
+      Gerer les emplois de temps
+    </h1>
+    <div class="col-md-4 col-sm-12 col-xs-12">
+      <label class="fw-bold">Filtrer par:</label>
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-book icon"></i>
+        </span>
+        <select
+          class="Selt form-control w-75"
+          id="apprentissage"
+          (change)="onChange($event)"
+        >
+          <option>Groupe</option>
+          <option>Salle</option>
+          <option>Enseignant</option>
+          <option>Jour</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 col-xs-12">
+      <label class="fw-bold">Filtrer par:</label>
+      <div class="input-group">
+        <span class="input-group-text">
+          <i class="fa fa-book icon"></i>
+        </span>
+        <select class="Selt form-control w-75">
+          <option *ngFor="let op of ListDeFilter; let i = index">
+            {{ op }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <h1 class="col-md-12 col-sm-12 col-xs-12 text-center my-3">
+      Emploi du temps
+    </h1>
+    <div id=" " class="col-md-8 col-sm-12 col-xs-12">
+      <table id="tableemploi" class="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th *ngFor="let tim of time" class="hour" colspan="2">
+              {{ tim }}h-{{ tim + 1 }}h
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let day of days; let j = index">
+            <td class="emploijours">{{ day }}</td>
+            <td
+              class="emptyhour"
+              (mouseover)="onmouseover(10 * i + j)"
+              (mouseout)="onmouseout(10 * i + j)"
+              id="{{ 10 * i + j }}"
+              *ngFor="let cre of empl; let i = index"
+              (click)="divclicked(10 * i + j)"
+            ></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="tab2" class="col-md-10 col-sm-12 col-xs-12">
+      <table id="table2" class="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="emploijours" *ngFor="let day of days; let j = index">
+              {{ day }}
+            </th>
+          </tr>
+        </thead>
+        <tbody id="tbdy">
+          <tr *ngFor="let tim of empl; let i = index">
+            <td
+              *ngIf="i % 2 == 0"
+              id="{{ 300 - i }}"
+              class="Timing"
+              rowspan="2"
+              class="hour"
+            >
+              {{ tim }}h-{{ tim + 1 }}h
+            </td>
+            <td
+              class="emptyhour"
+              *ngFor="let day of days; let j = index"
+              id=" {{ i * 10 + j + 1000 }}"
+              (mouseover)="onmouseover(i * 10 + j + 1000)"
+              (mouseout)="onmouseout(i * 10 + j + 1000)"
+            ></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12"></div>
+    <div id="InfoSeance" class="col-md-4 col-sm-12 col-xs-12">
+      <img
+        src="../../../../assets/img/imgsys/icons/close.png"
+        (click)="CloseInfo()"
+        alt="Delete"
+      />
+      <i class="fa fa-tag icon" (click)="EditSeance()"> </i>
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">DE 8 A 12</div>
+        <div class="col-md-12 col-sm-12 col-xs-12">PROF:MR.SAAD</div>
+        <div class="col-md-12 col-sm-12 col-xs-12">MODULE:MATH</div>
+        <div class="col-md-12 col-sm-12 col-xs-12">GROUPE :CE4A</div>
+      </div>
+    </div>
+
+    <div id="emploimodal" class="row emploimodal">
+      <img
+        src="../../../assets/img/imgsys/icons/close.png"
+        class="closeWin"
+        (click)="closeWin()"
+      />
+      <div class="">
+        <label class="flabel1">Rattrapage:</label>
+        <input type="checkbox" id="rattrapage" />
+      </div>
+      <div id="apprentissages" class="col-md-4 col-sm-12 col-xs-12">
+        <label class="flabel1">Seance de:</label>
+        <div class="input-group">
+          <span class="input-group-text">
+            <i class="fa fa-id-card icon"></i></span
+          ><select id="apprentissageSelect" class="form-control">
+            <option>SVT</option>
+            <option>Anglais</option>
+            <option>Français</option>
+            <option>Maths</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <label class="flabel1">Duration:</label>
+        <div class="input-group">
+          <span class="input-group-text">
+            <i class="fa fa-id-card icon"></i></span
+          ><input
+            type="number"
+            id="duration"
+            step="0.5"
+            min="0"
+            max="15"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <label class="flabel1">Salle:</label>
+        <div class="input-group">
+          <span class="input-group-text"> <i class="fa fa-book icon"></i></span
+          ><select id="salle" class="form-control">
+            <option id="7">Van gogh</option>
+            <option id="6">Klimt</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <label class="flabel1">Enseignant:</label>
+        <div class="input-group">
+          <span class="input-group-text"> <i class="fa fa-book icon"></i></span
+          ><select id="enseignant" class="form-control">
+            <option id="15">Choukri Safae</option>
+            <option id="14">Kassou Amina</option>
+            <option id="13">Bouzidi Hamid</option>
+            <option id="12">Abdelbaki Mohamed</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12 text-center my-3">
+        <input
+          type="button"
+          class="btn btn-primary"
+          value="VALIDER"
+          id="submit"
+          (click)="RemplirEmploi()"
+        />
+      </div>
+    </div>
+  </div>
+</form>
+
+<!-- V2 -->
+
+<!-- <form method="" class="">
+  <div id="content" class="row justify-content-center">
+    <h1 class="col-md-12 col-sm-12 col-xs-12 text-center my-3">
+      Gerer les emplois de temps
+    </h1>
+    <div class="col-md-4 col-sm-12 col-xs-12">
+      <label class="fw-bold">Filtrer par:</label>
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-book icon"></i>
+        </span>
+        <select
+          class="Selt form-control w-75"
+          id="apprentissage"
+          (change)="onChange($event)"
+        >
+          <option>Groupe</option>
+          <option>Salle</option>
+          <option>Enseignant</option>
+          <option>Jour</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 col-xs-12">
+      <label class="fw-bold">Filtrer par:</label>
+      <div class="input-group">
+        <span class="input-group-text">
+          <i class="fa fa-book icon"></i>
+        </span>
+        <select class="Selt form-control w-75">
+          <option *ngFor="let op of ListDeFilter; let i = index">
+            {{ op }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <h1 class="col-md-12 col-sm-12 col-xs-12 text-center my-3">
+      Emploi du temps
+    </h1>
+    <div id="emploi" class="col-md-10 col-sm-12 col-xs-12">
+      <table id="tableemploi" class="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th *ngFor="let tim of time" class="hour" colspan="2">
+              {{ tim }}h-{{ tim + 1 }}h
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let day of days; let j = index">
+            <td class="emploijours">{{ day }}</td>
+            <td
+              class="emptyhour"
+              (mouseover)="onmouseover(10 * i + j)"
+              (mouseout)="onmouseout(10 * i + j)"
+              id="{{ 10 * i + j }}"
+              *ngFor="let cre of empl; let i = index"
+              (click)="divclicked(10 * i + j)"
+            ></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="tab2" class="col-md-10 col-sm-12 col-xs-12">
+      <table id="table2" class="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="emploijours" *ngFor="let day of days; let j = index">
+              {{ day }}
+            </th>
+          </tr>
+        </thead>
+        <tbody id="tbdy">
+          <tr *ngFor="let tim of empl; let i = index">
+            <td
+              *ngIf="i % 2 == 0"
+              id="{{ 300 - i }}"
+              class="Timing"
+              rowspan="2"
+              class="hour"
+            >
+              {{ tim }}h-{{ tim + 1 }}h
+            </td>
+            <td
+              class="emptyhour"
+              *ngFor="let day of days; let j = index"
+              id=" {{ i * 10 + j + 1000 }}"
+              (mouseover)="onmouseover(i * 10 + j + 1000)"
+              (mouseout)="onmouseout(i * 10 + j + 1000)"
+            ></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="InfoSeance" class="col-md-4 col-sm-12 col-xs-12">
+      <img
+        src="../../../../assets/img/imgsys/icons/close.png"
+        (click)="CloseInfo()"
+        alt="Delete"
+      />
+      <i class="fa fa-tag icon" (click)="EditSeance()"> </i>
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">DE 8 A 12</div>
+        <div class="col-md-12 col-sm-12 col-xs-12">PROF:MR.SAAD</div>
+        <div class="col-md-12 col-sm-12 col-xs-12">MODULE:MATH</div>
+        <div class="col-md-12 col-sm-12 col-xs-12">GROUPE :CE4A</div>
+      </div>
+    </div>
+    <div id="edit" class="col-md-4 col-sm-12 col-xs-12" style="display: none">
+      <div class="row justify-content-center">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <span>HeurDebut</span
+          ><select>
+            <option *ngFor="let opt of time">{{ opt }}</option>
+          </select>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <span>Duree</span>
+          <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+          <select>
+            <option>00</option>
+            <option>30</option>
+          </select>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          Groupes
+          <select>
+            <option>CE7</option>
+            <option>CE8</option>
+          </select>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          Matier :<input type="text" />
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          Enseignant :<input type="text" />
+        </div>
+        <div class="col-md-3 col-sm-12 col-xs-12">
+          <input
+            value="Enregistrer"
+            type="button"
+            class="btn btn-primary"
+            (click)="Enregistrer()"
+          />
+        </div>
+        <div class="col-md-3 col-sm-12 col-xs-12">
+          <input
+            value="Supprimer"
+            type="button"
+            class="btn btn-primary"
+            (click)="Supprimer()"
+          />
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12"></div>
+      </div>
+    </div>
+
+    <div id="emploimodal" class="row emploimodal" style="display: none">
+      <img
+        src="../../../assets/img/imgsys/icons/close.png"
+        class="closeWin"
+        (click)="closeWin()"
+      />
+      <div class="inputs1">
+        <label class="flabel1">Rattrapage:</label>
+        <input type="checkbox" id="rattrapage" />
+      </div>
+      <div id="apprentissages" class="col-md-4 col-sm-12 col-xs-12 inputs1">
+        <label class="flabel1">Seance de:</label>
+        <div>
+          <i class="fa fa-id-card icon"></i
+          ><select id="apprentissageSelect">
+            <option>SVT</option>
+            <option>Anglais</option>
+            <option>Français</option>
+            <option>Maths</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12 inputs1">
+        <label class="flabel1">Duration:</label>
+        <div>
+          <i class="fa fa-id-card icon"></i
+          ><input type="number" id="duration" step="0.5" min="0" max="15" />
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12 inputs1">
+        <label class="flabel1">Salle:</label>
+        <div>
+          <i class="fa fa-book icon"></i
+          ><select id="salle">
+            <option id="7">Van gogh</option>
+            <option id="6">Klimt</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12 inputs1">
+        <label class="flabel1">Enseignant:</label>
+        <div>
+          <i class="fa fa-book icon"></i
+          ><select id="enseignant">
+            <option id="15">Choukri Safae</option>
+            <option id="14">Kassou Amina</option>
+            <option id="13">Bouzidi Hamid</option>
+            <option id="12">Abdelbaki Mohamed</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12 inputs1 cent">
+        <input
+          type="button"
+          name=""
+          value="VALIDER"
+          id="submit"
+          (click)="RemplirEmploi()"
+        />
+      </div>
+    </div>
+  </div>
+</form> -->

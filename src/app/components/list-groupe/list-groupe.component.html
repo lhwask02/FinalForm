@@ -1,0 +1,27 @@
+<form class="container">
+  <div class="row justify-content-center">
+    <h1 class="col-md-12 col-sm-12 col-xs-12 text-center my-3">
+      Liste des Groupes
+    </h1>
+    <div id="Liste" class="row">
+      <div
+        class="carte col-md-3 col-sm-6 col-xs-12 text-center"
+        *ngFor="let groupe of listGroup"
+      >
+        <img
+          id="{{ groupe.Id }}"
+          src="../../../../assets/img/imgsys/icons/close.png"
+          class="closeS"
+          (click)="Supprimer($event)"
+        />
+        <label class="fw-bold">{{
+          groupe.Programme.Intitule + groupe.Libelle
+        }}</label>
+        <div></div>
+        <label class="p-3 blk"
+          ><b class="">Nombre d'élèves : </b> {{ groupe.NumberEleve }}</label
+        >
+      </div>
+    </div>
+  </div>
+</form>

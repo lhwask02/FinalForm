@@ -1,0 +1,415 @@
+<!-- <nav class="navbar navbar-collapse-md">
+  <button
+    class="navbar-toggler bg-primary"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapsibleNavbar"
+  >
+    <span class="color-light"><i class="fa fa-bars"></i></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li>
+        <a class="navbar-brand text-center" routerLink="/MenusComponent"
+          ><img
+            class="img-fluid"
+            src="../../../../assets/img/imgsys/scheduleBackground.png"
+            alt="Logo"
+            routerLink="/MenusComponent"
+        /></a>
+      </li>
+      <li>
+        <a class="nav-link text-left" routerLink="/MainComponent"
+          >MainComponent</a
+        >
+      </li>
+
+      <li>
+        <a class="nav-link text-left" routerLink="/MenusComponent"
+          >MenusComponent</a
+        >
+      </li>
+      <li>
+        <a
+          class="nav-link text-left"
+          routerLink="/FomulaireDePaiementComponent"
+        >
+          FomulaireDePaiementComponent</a
+        >
+      </li>
+      <li>
+        <a
+          class="nav-link text-left"
+          routerLink="/PaiementDesSalairesAComponent"
+          >PaiementDesSalairesAComponent
+        </a>
+      </li>
+      <li>
+        <a
+          class="nav-link text-left"
+          routerLink="/PaiementDesSalairesBComponent"
+          >PaiementDesSalairesBComponent
+        </a>
+      </li>
+
+      <li>
+        <a
+          class="nav-link text-left"
+          routerLink="/SituationDesPaiementsComponent"
+        >
+          SituationDesPaiementsComponent</a
+        >
+      </li>
+      <li>
+        <a class="nav-link text-left" routerLink="/HistoriquePresenceComponent">
+          HistoriquePresenceComponent</a
+        >
+      </li>
+
+      <li>
+        <a class="nav-link text-left" routerLink="/SchoolInfoComponent">
+          SchoolInfoComponent</a
+        >
+      </li>
+      <li>
+        <a class="nav-link text-left" routerLink="/AjouterEnseignantComponent"
+          >Ajouter Enseignenat</a
+        >
+      </li>
+      <li>
+        <a class="nav-link text-left" routerLink="/ListEnseignantComponent"
+          >List Enseignant</a
+        >
+      </li>
+      <li>
+        <a class="nav-link text-left" routerLink="/AjouterGroupeComponent"
+          >Ajouter Groupe</a
+        >
+      </li>
+      <li>
+        <a class="nav-link text-left" routerLink="/GererProgrammesComponent"
+          >Gerrer Programe</a
+        >
+      </li>
+      <li>
+        <a class="nav-link text-left" routerLink="/ListProgrammeComponent"
+          >List Programme</a
+        >
+      </li>
+      <li>
+        <a class="nav-link text-left" routerLink="/GererEmploiComponent"
+          >Gerrer Emploi</a
+        >
+      </li>
+      <li>
+        <a class="nav-link text-left" routerLink="/GestionSallesComponent"
+          >Gestion Salles
+        </a>
+      </li>
+      <li>
+        <a
+          class="nav-link text-left"
+          routerLink="/AssociationEleveGroupeComponent"
+          >Association Eleve Groupe</a
+        >
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          id="navbardrop"
+          data-toggle="dropdown"
+        >
+          Dropdown link
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink="/SignUpComponent">Inscrire</a>
+          <a class="dropdown-item" routerLink="/LogInComponent">Login</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+
+<!-- <div>
+  <div id="mySidena" class="sidena">
+    <ul>
+      <li>
+        <a class="homebt" routerLink="/MainComponent">
+          <i class="fa fa-home"></i>
+        </a>
+      </li>
+      <li>
+        <div>
+          <div>
+            <div>
+              <div>
+                <div
+                  *ngFor="let ele of ListElements; let i = index"
+                  id="{{ i }}"
+                >
+                  <img src="{{ ele[0] }}" />
+                  <div>{{ ele[1] + ele[2] }}</div>
+                </div>
+              </div>
+            </div>
+            <div id="badgeman">
+              <div>
+                <label>Fonctionnalité</label>
+                <form>
+                  <input type="radio" name="radio" checked="" />
+                  Etudiant<br />
+                  <input type="radio" name="radio" />
+                  Enseignant<br />
+                  <input type="radio" name="radio" />
+                  Assistant<br />
+                  <input type="radio" name="radio" class="form-control" />
+                  Groupe
+                </form>
+              </div>
+
+              <div>
+                <div>
+                  <input type="text" placeholder="nom et/ou prenom" />
+                  <input type="text" placeholder="Telephone" />
+                </div>
+                <select id="second" hidden=""></select>
+              </div>
+              <input
+                type="button"
+                name=""
+                Class="btn btn-success"
+                value="VALIDER"
+                id="bmvalide"
+              />
+            </div>
+            <div>
+              <button id="bmbutton" class="rightmenu" (click)="openNa()">
+                <img
+                  src="../../../assets/img/imgsys/icons/badge.png"
+                  class="slideimg"
+                />Badge Manuel
+              </button>
+              <button id="fsbutton" class="rightmenu">
+                <img
+                  src="../../../assets/img/imgsys/icons/absence.png"
+                  class="slideimg"
+                />Fiche d'absence
+              </button>
+              <button id="dsbutton" class="rightmenu">
+                <img
+                  src="../../../assets/img/imgsys/icons/calendar.png"
+                  class="slideimg"
+                />Date Specifique
+              </button>
+            </div>
+          </div>
+        </div>
+        -
+      </li>
+      <li>
+        <a class="closebt" (click)="closeNa()">
+          <i class="fa fa-close"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div> -->
+
+<!-- <div>
+  <div id="mySidena" class="sidena">
+    <ul>
+      <li>
+        <a class="homebt" routerLink="/MainComponent">
+          <i class="fa fa-home"></i>
+        </a>
+      </li>
+      <li>
+        <div class="">
+          <div>
+            <div id=" " style="right: 0px">
+              <div class="" id=" ">
+                <div
+                  *ngFor="let ele of ListElements; let i = index"
+                  class=""
+                  id="{{ i }}"
+                >
+                  <img src="{{ ele[0] }}" />
+                  <div class="">{{ ele[1] + ele[2] }}</div>
+                </div>
+              </div>
+            </div>
+            <div id="badgeman" style="right: 0px">
+              <div id=" ">
+                <label>Fonctionnalité</label>
+                <form>
+                  <input type="radio" name=" " id=" " checked="" />
+                  Etudiant<br />
+                  <input type="radio" name=" " id=" " />
+                  Enseignant<br />
+                  <input type="radio" name=" " id=" " />
+                  Assistant<br />
+                  <input type="radio" name=" " id=" " /> Groupe
+                </form>
+              </div>
+
+              <div id=" ">
+                <div id=" ">
+                  <input type="text" id=" " placeholder="nom et/ou prenom" />
+                  <input type="text" id=" " placeholder="Telephone" />
+                </div>
+                <select id="second" hidden=""></select>
+              </div>
+              <input
+                type="button"
+                name=""
+                Class="btn btn-success"
+                value="VALIDER"
+                id="bmvalide"
+              />
+            </div>
+            <div>
+              <button id="bmbutton" class="rightmenu">
+                <img
+                  src="../../../assets/img/imgsys/icons/badge.png"
+                  class="slideimg"
+                />Badge Manuel
+              </button>
+              <button id="fsbutton" class="rightmenu">
+                <img
+                  src="../../../assets/img/imgsys/icons/absence.png"
+                  class="slideimg"
+                />Fiche d'absence
+              </button>
+              <button id="dsbutton" class="rightmenu">
+                <img
+                  src="../../../assets/img/imgsys/icons/calendar.png"
+                  class="slideimg"
+                />Date Specifique
+              </button>
+            </div>
+          </div>
+        </div>
+        -
+      </li>
+      <li>
+        <a class="closebt" (click)="closeNa()">
+          <i class="fa fa-close"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div id="mai">
+    <span style="font-size: 30px; cursor: pointer" (click)="openNa()">
+      <i class="fa fa-bars"></i>
+    </span>
+  </div>
+</div> -->
+
+<div>
+  <div id="mySidena" class="sidena">
+    <ul>
+      <li>
+        <div class="">
+          <div>
+            <div id="badgeman" style="right: 0px">
+              <div id="func">
+                <label>Fonctionnalité</label>
+                <form>
+                  <input type="radio" name="func" id="bmadherent" checked />
+                  Etudiant<br />
+                  <input type="radio" name="func" id="bmenseignant" />
+                  Enseignant<br />
+                  <input type="radio" name="func" id="bmassistant" />
+                  Assistant<br />
+                  <input type="radio" name="func" id="bmgroupe" /> Groupe
+                </form>
+              </div>
+
+              <div id="inp">
+                <div id="first">
+                  <input
+                    type="text"
+                    id="badgenom"
+                    placeholder="nom et/ou prenom"
+                    (keyup)="Filter($event)"
+                  />
+                  <input
+                    type="text"
+                    id="badgetelephone"
+                    placeholder="Telephone"
+                  />
+                </div>
+                <select id="second" hidden></select>
+              </div>
+              <input
+                type="button"
+                name=""
+                Class="btn btn-success"
+                value="VALIDER"
+                id="bmvalide"
+                (click)="openNa2()"
+              />
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <a class="closebt" (click)="closeNa()">
+          <i class="fa fa-close"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div id="mySidena2" class="sidena2" (click)="closeNa2()">
+    <ul>
+      <li>
+        <div class="">
+          <div>
+            <div id="rightlist" style="right: 0px">
+              <div class="unilist" id="bmlist">
+                <div
+                  *ngFor="let ele of ListElementsFilter; let i = index"
+                  class="listelem"
+                  id="{{ i }}"
+                >
+                  <img src="{{ ele[0] }}" class="elempic" />
+
+                  <div class="elemname">{{ ele[1] + ele[2] }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        -
+      </li>
+      <li>
+        <a class="closebt2" (click)="closeNa2()">
+          <i class="fa fa-close"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <button id="bmbutton" class="rightmenu" (click)="openNa()">
+      <img
+        src="../../../assets/img/imgsys/icons/badge.png"
+        class="slideimg"
+      />Badge Manuel
+    </button>
+    <button id="fsbutton" class="rightmenu">
+      <img
+        src="../../../assets/img/imgsys/icons/absence.png"
+        class="slideimg"
+      />Fiche d'absence
+    </button>
+    <button id="dsbutton" class="rightmenu" (click)="Toggle()">
+      <img
+        src="../../../assets/img/imgsys/icons/calendar.png"
+        class="slideimg"
+      />Date Specifique
+    </button>
+  </div>
+  <div *ngIf="active">
+    <app-middle-menu></app-middle-menu>
+  </div>
+</div>

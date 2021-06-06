@@ -1,0 +1,424 @@
+<form method="post">
+  <div id="content" class="row justify-content-center">
+    <h1 class="col-md-12 col-sm-12 col-xs-12 my-3 text-center">
+      Situation des paiements
+    </h1>
+
+    <div class="col-md-5 col-sm-12 col-xs-12">
+      <label class="flabel">De : </label>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-calendar icon"></i>
+        </span>
+        <input type="date" id="from" class="form-control" />
+      </div>
+    </div>
+    <div class="col-md-5 col-sm-12 col-xs-12">
+      <label class="flabel">A : </label>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-calendar icon"></i>
+        </span>
+        <input type="date" id="to" class="form-control" />
+      </div>
+    </div>
+    <div class="col-md-5 col-sm-12 col-xs-12">
+      <label class="flabel">Matricule : </label>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-book icon"></i>
+        </span>
+        <input type="text" id="matricule" class="form-control" />
+      </div>
+    </div>
+    <div class="col-md-5 col-sm-12 col-xs-12">
+      <label class="flabel">Nom ou Prenom : </label>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-book icon"></i>
+        </span>
+        <input type="text" id="nom" class="form-control" />
+      </div>
+    </div>
+    <div class="col-md-5 col-sm-12 col-xs-12">
+      <label class="flabel">Groupe:</label>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-book icon"></i
+        ></span>
+        <select id="groupe" class="form-control">
+          <option id="Aucun">Aucun</option>
+          <option id="39">CP</option>
+          <option id="38">CE2</option>
+          <option id="36">CE5</option>
+          <option id="35">CE3 B</option>
+          <option id="34">CE3 A</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-5 col-sm-12 col-xs-12">
+      <label class="flabel">Impayé : </label>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-book icon"></i>
+        </span>
+        <input type="number" id="impaye" default="0" class="form-control" />
+      </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12"></div>
+    <div style="display: inline">
+      <input type="button" value="AFFICHER" class="btn btn-primary" />
+    </div>
+    <div style="display: inline">
+      <img src="../../../assets/img/imgsys/icons/pdf.png" class="pdf" />
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 my-2"></div>
+
+    <div id="paiements" class="col-md-10 col-sm-12 col-xs-12">
+      <div
+        class="paiementElem {{ pai[7] }}"
+        id="{{ i }}"
+        *ngFor="let pai of Payments; let i = index"
+        (click)="Paid(i)"
+      >
+        <div class="bold">{{ pai[0] }}</div>
+        <div>Etudiant:{{ pai[1] + " " + pai[2] }}</div>
+        <div>Montant A Payer: {{ pai[3] }} Dhs</div>
+        <div>Montant Payé: {{ pai[4] }} Dhs</div>
+        <div>Date du dernier paiement:le {{ pai[5] }}</div>
+        <div>Impayé: {{ pai[6] }} Dhs</div>
+        <div class="right">
+          <input
+            type="button"
+            value="Imprimer"
+            class="btn btn-success m-1"
+          /><input
+            type="button"
+            value="Factures partielles"
+            class="btn btn-success"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      id="paiemodal"
+      style="display: none"
+      class="position-fixed paiemodal justify-content-center"
+    >
+      <img
+        src="../../../assets/img/imgsys/icons/close.png"
+        class="closeWin"
+        (click)="closeWin()"
+        id="closeWin"
+      />
+      <div class="">
+        <label class="">Date de Debut pour cette facture:</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-id-card icon"></i></span
+          ><input type="date" id="dateDebut" disabled="" class="form-control" />
+        </div>
+      </div>
+      <div class="">
+        <label>Date de fin pour cette facture:</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-calendar icon"></i></span
+          ><input type="date" id="dateFin" class="form-control" />
+        </div>
+      </div>
+      <div></div>
+      <div class="">
+        <label class="">Heures totales:</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-id-card icon"></i></span
+          ><input type="number" id="totalHeures" class="form-control" />
+        </div>
+      </div>
+      <div class="">
+        <label class="">Tarif (Dhs):</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-money icon"></i></span
+          ><input
+            type="number"
+            id="tarif"
+            step="0.1"
+            disabled=""
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div></div>
+      <div class="">
+        <label class="">Montant A payer (Dhs):</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-money icon"></i></span
+          ><input
+            type="number"
+            id="montantAPayer"
+            step="0.1"
+            disabled=""
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="">
+        <label class="">Montant Payé (Dhs):</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-money icon"></i></span
+          ><input
+            type="number"
+            id="montantPaye"
+            step="0.1"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="">
+        <label class="">Reste a Payer (Dhs):</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-money icon"></i></span
+          ><input
+            type="number"
+            id="montantReste"
+            step="0.1"
+            disabled=""
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="my-3 text-center">
+        <input
+          type="button"
+          id="submit"
+          value="VALIDER"
+          class="btn btn-primary"
+        />
+      </div>
+    </div>
+
+    <table class="liste"></table>
+    <div class="">
+      <input
+        type="button"
+        value="INFORMER"
+        id="informer"
+        class="btn btn-primary"
+        (click)="informer()"
+      />
+    </div>
+  </div>
+</form>
+
+<!-- v2 -->
+<!-- <form method="post">
+  <div id="content" class="row">
+    <h1 class="col-md-12 col-sm-12 col-xs-12 my-3 text-center">
+      Situation des paiements
+    </h1>
+    <div>
+      <div class="inputs">
+        <label class="flabel">De : </label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-calendar icon"></i>
+          </span>
+          <input type="date" id="from" class="form-control" />
+        </div>
+      </div>
+      <div class="inputs">
+        <label class="flabel">A : </label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-calendar icon"></i>
+          </span>
+          <input type="date" id="to" class="form-control" />
+        </div>
+      </div>
+      <div class="inputs">
+        <label class="flabel">Matricule : </label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-book icon"></i>
+          </span>
+          <input type="text" id="matricule" class="form-control" />
+        </div>
+      </div>
+      <div class="inputs">
+        <label class="flabel">Nom ou Prenom : </label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-book icon"></i>
+          </span>
+          <input type="text" id="nom" class="form-control" />
+        </div>
+      </div>
+      <div class="inputs">
+        <label class="flabel">Groupe:</label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-book icon"></i
+          ></span>
+          <select id="groupe" class="form-control">
+            <option id="Aucun">Aucun</option>
+            <option id="39">CP</option>
+            <option id="38">CE2</option>
+            <option id="36">CE5</option>
+            <option id="35">CE3 B</option>
+            <option id="34">CE3 A</option>
+          </select>
+        </div>
+      </div>
+      <div class="inputs">
+        <label class="flabel">Impayé : </label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-book icon"></i>
+          </span>
+          <input type="number" id="impaye" default="0" class="form-control" />
+        </div>
+      </div>
+      <div class="inputs1 cent">
+        <input type="button" name="" value="AFFICHER" id="search" />
+        <img src="../../../assets/img/imgsys/icons/pdf.png" class="pdf" />
+      </div>
+      <div id="paiements">
+        <div
+          class="paiementElem {{ pai[7] }}"
+          id="{{ i }}"
+          *ngFor="let pai of Payments; let i = index"
+          (click)="Paid(i)"
+        >
+          <div class="cent bold">{{ pai[0] }}</div>
+          <div>Etudiant:{{ pai[1] + "" + pai[2] }}</div>
+          <div>Montant A Payer: {{ pai[3] }} Dhs</div>
+          <div>Montant Payé: {{ pai[4] }} Dhs</div>
+          <div>Date du dernier paiement:le {{ pai[5] }}</div>
+          <div>Impayé: {{ pai[6] }} Dhs</div>
+          <div class="right">
+            <input
+              type="button"
+              value="Imprimer"
+              class="imprimer customButton"
+            /><input
+              type="button"
+              value="Factures partielles"
+              class="imprimerFact customButton"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <table class="liste"></table>
+    <div class="inputs1 cent">
+      <input type="button" value="INFORMER" id="informer" (click)="informer()" />
+    </div>
+  </div>
+  <div
+    id="paiemodal"
+    class="paiemodal justify-content-center"
+    style="display: none"
+  >
+    <img
+      src="../../../assets/img/imgsys/icons/close.png"
+      class="closeWin"
+      (click)="closeWin()"
+      id="closeWin"
+    />
+    <div>
+      <label class="flabel1">Date de Debut pour cette facture:</label>
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-id-card icon"></i></span
+        ><input type="date" id="dateDebut" disabled="" class="form-control" />
+      </div>
+    </div>
+    <div id="finDiv">
+      <label class="flabel1">Date de fin pour cette facture:</label>
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-calendar icon"></i></span
+        ><input type="date" id="dateFin" class="form-control" />
+      </div>
+    </div>
+    <div></div>
+    <div id="heuresDiv">
+      <label class="flabel1">Heures totales:</label>
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-id-card icon"></i></span
+        ><input type="number" id="totalHeures" class="form-control" />
+      </div>
+    </div>
+    <div>
+      <label class="flabel1">Tarif (Dhs):</label>
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-money icon"></i></span
+        ><input
+          type="number"
+          id="tarif"
+          step="0.1"
+          disabled=""
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div></div>
+    <div>
+      <label class="flabel1">Montant A payer (Dhs):</label>
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-money icon"></i></span
+        ><input
+          type="number"
+          id="montantAPayer"
+          step="0.1"
+          disabled=""
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div>
+      <label class="flabel1">Montant Payé (Dhs):</label>
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-money icon"></i></span
+        ><input
+          type="number"
+          id="montantPaye"
+          step="0.1"
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div>
+      <label class="flabel1">Reste a Payer (Dhs):</label>
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-money icon"></i></span
+        ><input
+          type="number"
+          id="montantReste"
+          step="0.1"
+          disabled=""
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div class="my-3">
+      <input
+        type="button"
+        id="submit"
+        value="VALIDER"
+        class="btn btn-primary"
+      />
+    </div>
+  </div>
+</form> -->

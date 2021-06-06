@@ -1,0 +1,66 @@
+table
+{
+    border-collapse: separate;  
+}
+th,#emploi2 tr td:first-child{
+    background-color:#3f7cd6;
+    border-radius: 8px;
+    text-align: justify;
+}
+td{
+    background-color:grey;
+    border-radius: 8px;
+}
+td:hover{
+    background-color:rgb(85, 85, 202);
+    cursor: pointer;
+}
+#tab,#tab2
+{
+    overflow-x:auto;
+}
+#emploi2 td[colspan]
+{
+    background-color:#008000;
+}
+#InfoSeance
+{
+    border: 1px solid black;
+    border-radius: 3px;
+    position: relative;
+}
+img
+{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+ 
+}
+img:hover,i:hover
+{
+  cursor: pointer;
+}
+#edit
+{border: solid 1px black;}
+@media screen and (min-width: 1025px) {
+    #tab2 {
+    display: none;   
+    }
+    #emploi {
+        display: block;   
+        visibility: visible;
+        }
+       
+  }
+@media screen and (max-width: 1024px) {
+    #emploi {
+    display: none;   
+    }
+    #tab2{
+        display: block;   
+        visibility: visible;
+        }
+  
+  }

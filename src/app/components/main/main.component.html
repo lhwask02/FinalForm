@@ -1,0 +1,150 @@
+<div id="content" class="container">
+  <!-- <div class="schoolBackground"></div> -->
+  <h1 id="bienvenue">BIENVENUE A WOULOUJ</h1>
+  <!-- <div class="center">
+    <img
+      src="../../../assets/img/imgsys/backgrounds/etablissement.png"
+      id="mainLogo"
+    />
+  </div> -->
+  <!-- <div id="bienvenue">Bienvenue, Youssef Frira</div> -->
+  <!-- <div id="mostvisited"></div> -->
+
+  <!-- <div class="d-flex justify-content-around mb-3">
+  </div> -->
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <div class="card mb-3 bg-success" style="max-width: 18rem">
+        <div class="text-white mb-2">
+          <div class="">
+            <img
+              style="display: inline"
+              src="../../../assets/img/imgsys/icons/miss.png"
+            /><span>Historique de présence</span>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="max-width: 18rem">
+        <div class="card-header bg-success text-white">
+          <div class="">
+            <img
+              style="display: inline"
+              src="../../../assets/img/imgsys/icons/pedag.png"
+            /><span>Gestion pedagogique</span>
+          </div>
+        </div>
+        <div class="card-body text-dark">
+          <div class="notifContent">Mercredi 26/05 : Jour férié.</div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <div></div>
+        </div>
+        <div class="card-footer bg-transparent border-success">
+          <div class="text-center">
+            <button class="btn btn-success" routerLink="/GererEmploiComponent">
+              Modifier l'emploi de temps
+            </button>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-success my-1" (click)="Notifier()">
+              Notifier les élèves et les parents
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card mb-3 bg-success" style="max-width: 18rem">
+        <div class="text-white mb-2">
+          <div class="">
+            <img
+              style="display: inline"
+              src="../../../assets/img/imgsys/icons/credit.png"
+            /><span>Formulaire de paiement</span>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="max-width: 18rem">
+        <div class="card-header bg-success text-white">
+          <div class="">
+            <img
+              style="display: inline"
+              src="../../../assets/img/imgsys/icons/pedag.png"
+            /><span>Gestion pedagogique</span>
+          </div>
+        </div>
+        <div class="card-body text-dark">
+          <div class="notification">
+            <div class="notifContent">
+              <span class="today">Lundi 31/05</span> :
+            </div>
+            <div class="notifContent">6 élèves non badgés.</div>
+            <div class="notifContent">1 enseignant non badgé.</div>
+            <br />
+            <br />
+            <div></div>
+          </div>
+        </div>
+        <div class="card-footer bg-transparent border-success">
+          <div class="text-center">
+            <button class="btn btn-success">Imprimer la fiche d'absence</button>
+            <button
+              class="notifButton notifier btn btn-success my-1"
+              (click)="Notifier()"
+            >
+              Envoyer les messages de notification
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card mb-3 bg-success" style="max-width: 18rem">
+        <div class="text-white mb-2">
+          <div class="notifSection">
+            <img src="../../../assets/img/imgsys/icons/admin.png" />
+            Gestion administrative
+          </div>
+        </div>
+      </div>
+      <div class="card" style="max-width: 18rem">
+        <div class="card-header bg-success text-white">
+          <div class="notifSection">
+            <img src="../../../assets/img/imgsys/icons/finance.png" />Gestion
+            financière
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="notification text-dark">
+            <div class="">Mai 2021 :</div>
+            <div class="">
+              3 élèves n'ont pas reglé leurs situation pour le mois.
+            </div>
+            <div class="text-danger">
+              1 élève n'a pas reglé sa situation depuis 3 mois.
+            </div>
+            <div class="notifButtons"></div>
+          </div>
+        </div>
+        <div class="card-footer bg-transparent border-success">
+          <div class="text-center">
+            <button class="btn btn-success mb-1" (click)="Notifier()">
+              Notifier les parents
+            </button>
+
+            <button
+              class="btn btn-success"
+              routerLink="/SituationDesPaiementsComponent"
+            >
+              Vérifier les situations des paiements
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,343 @@
+<div id="content" class="row justify-content-center">
+  <h1 class="col-md-12 col-sm-12 col-xs-12 my-3 text-center">
+    Paiement des salaires
+  </h1>
+  <div
+    class="
+      col-md-12 col-sm-12 col-xs-12
+      alert alert-secondary alert-dismissible
+      fade
+      show
+    "
+    role="alert"
+  >
+    <strong>Attention !</strong> You should check in on some of those fields
+    below.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <!-- <div id="paiemodal" class="col-md-12 col-sm-12 col-xs-12 paiemodal">
+    <img
+      src="../../../assets/img/imgsys/icons/close.png"
+      class="closeWin"
+      (click)="closeWin()"
+    />
+    <div class="unilist"></div>
+  </div> -->
+
+  <div class="col-md-6 col-sm-6 col-xs-12" id="teacherinfos">
+    <div class="inputs1">
+      <label class="flabel">Enseignant</label>
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-user icon"></i> </span
+        ><select class="form-control" id="enseignant">
+          <option id="15">Choukri Safae</option>
+          <option id="14">Kassou Amina</option>
+          <option id="13">Bouzidi Hamid</option>
+          <option id="12">Abdelbaki Mohamed</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="inputs1">
+      <label class="flabel">Mois</label>
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-user icon"></i>
+        </span>
+        <select id="month" class="form-control">
+          <option num="01" id="01">Janvier</option>
+          <option num="02" id="02">Février</option>
+          <option num="03" id="03">Mars</option>
+          <option num="04" id="04">Avril</option>
+          <option num="05" id="05">Mai</option>
+          <option num="06" id="06">Juin</option>
+          <option num="07" id="07">Juillet</option>
+          <option num="08" id="08">Août</option>
+          <option num="09" id="09">Septembre</option>
+          <option num="10" id="10">Octobre</option>
+          <option num="11" id="11">Novembre</option>
+          <option num="12" id="12">Décembre</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="inputs1">
+      <label class="flabel">Année</label>
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-user icon"></i> </span
+        ><select class="form-control" id="year">
+          <option id="2010">2010</option>
+          <option id="2011">2011</option>
+          <option id="2012">2012</option>
+          <option id="2013">2013</option>
+          <option id="2014">2014</option>
+          <option id="2015">2015</option>
+          <option id="2016">2016</option>
+          <option id="2017">2017</option>
+          <option id="2018">2018</option>
+          <option id="2019">2019</option>
+          <option id="2020">2020</option>
+          <option id="2021">2021</option>
+          <option id="2022">2022</option>
+          <option id="2023">2023</option>
+          <option id="2024">2024</option>
+          <option id="2025">2025</option>
+          <option id="2026">2026</option>
+          <option id="2027">2027</option>
+          <option id="2028">2028</option>
+          <option id="2029">2029</option>
+          <option id="2030">2030</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-sm-6 col-xs-12">
+    <table class="subtleTable">
+      <thead>
+        <tr>
+          <th>Groupe</th>
+          <th>Mode</th>
+          <th>Scalaire</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="groupeSalaire" id="36" duree="0">
+          <td>CE5(CE5)</td>
+          <td>
+            <select class="valueInput form-control">
+              <option class="sans">Sans</option>
+              <option class="forfait">Forfait</option>
+              <option class="parheure">Par heure</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" value="0" class="valueInput" /><label
+              class="currencyLabel bold"
+            ></label>
+          </td>
+        </tr>
+        <tr class="groupeSalaire" id="34" duree="0">
+          <td>CE3 A(CE3)</td>
+          <td>
+            <select class="valueInput">
+              <option class="sans">Sans</option>
+              <option class="forfait">Forfait</option>
+              <option class="parheure">Par heure</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" class="valueInput" value="0" /><label
+              class="currencyLabel bold"
+            ></label>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-8 my-3">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Groupe</th>
+          <th>Mode</th>
+          <th>Scalaire</th>
+          <th>Membres actifs</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fixe 1</td>
+          <td>
+            <select class="valueInput form-control">
+              <option class="sans">Sans</option>
+              <option class="forfait">Forfait</option>
+              <option class="parheure">Par heure</option>
+              <option class="paradherent">Par adherent</option>
+              <option class="pourcentage">Pourcentage</option>
+            </select>
+          </td>
+          <td>
+            <input
+              type="number"
+              class="valueInput form-control"
+              value="0"
+            /><label class="bold">Dhs/Adherent</label>
+          </td>
+          <td>
+            <label class="membres">12 Adherents</label>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div></div>
+  <div class="col-md-8 col-sm-8 col-xs-8 my-3">
+    <table id="tableSalaire" class="table">
+      <tbody>
+        <tr>
+          <th class="fancyTableElem">Type</th>
+          <th>Salaire de base</th>
+          <th>Forfait</th>
+          <th>Par heure</th>
+        </tr>
+        <tr>
+          <td class="fancyTableElem">Montant :</td>
+          <td id="salaire">Dhs</td>
+          <td id="forfait">0 Dhs</td>
+          <td id="parheure">0 Dhs</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-8 my-3">
+    <label class="flabel1">Total</label>
+    <div class="inputs1">
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-money icon"></i></span
+        ><input type="number" class="form-control" id="total" value="0" />
+      </div>
+    </div>
+
+    <label class="flabel1">Payé</label>
+    <div class="inputs1">
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-money icon"></i></span
+        ><input type="number" class="form-control" id="paye" value="0" />
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-8 my-3 cent paiestate">
+    <label class="bold">Total : </label><span id="total"> Dhs</span
+    ><label style="margin-left: 30px" class="bold">Payé : </label
+    ><span id="paye">0 Dhs</span>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-8 my-3 centeredInput inputs1 center">
+    <input
+      type="button"
+      name=""
+      class="btn btn-primary"
+      value="PAIEMENTS"
+      id="refresh"
+    />
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-8 my-3" id="paie2">
+    <div class="input-group inputs1">
+      <span class="input-group-text" id="basic-addon1">
+        <i class="fa fa-money icon"></i></span
+      ><input type="number" id="montant" class="form-control" value="0" />
+    </div>
+    <div class="centeredInput inputs1 center">
+      <input
+        type="button"
+        name=""
+        class="btn btn-primary"
+        value="Payer"
+        id="pay"
+      />
+    </div>
+    <div id="paietable">
+      <table class="liste">
+        <tr>
+          <th>Payé</th>
+          <th>Mois</th>
+          <th>Date Paiement</th>
+          <th>Supprimer</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-8 col-xs-8 my-3 inputs1 cent">
+    <input
+      type="button"
+      name=""
+      value="Valider"
+      id="submit"
+      class="btn btn-primary"
+    /><img src="../../../assets/img/imgsys/icons/pdf.png" class="pdf" />
+  </div>
+  <div>
+    <br />
+    <h1>Mode de paiement</h1>
+    <form method="post">
+      <label class="flabel">Enseignant</label>
+      <div class="inputs1">
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-user icon"></i></span
+          ><select class="form-control" id="enseignant"></select>
+        </div>
+      </div>
+      <div class="inputs">
+        <label class="flabel">Date Début</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-calendar icon"></i></span
+          ><input type="date" class="form-control" id="from" />
+        </div>
+      </div>
+      <div class="inputs">
+        <label class="flabel">Année</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-calendar icon"></i></span
+          ><input type="date" class="form-control" />
+        </div>
+      </div>
+      <div class="inputs">
+        <label class="flabel">Groupe</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-money icon"></i></span
+          ><select class="form-control"></select>
+        </div>
+      </div>
+      <div class="inputs">
+        <label class="flabel">Mode de paiement</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-money icon"></i></span
+          ><select class="form-control"></select>
+        </div>
+      </div>
+      <div class="inputs">
+        <label class="flabel">Scalaire</label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-book icon"></i></span
+          ><input type="text" class="form-control" />
+        </div>
+      </div>
+      <div class="inputs1 cent">
+        <input type="button" name="" value="Ajouter" class="btn btn-primary" />
+      </div>
+    </form>
+
+    <table class="liste">
+      <tr>
+        <th>Enseignant</th>
+        <th>Groupe</th>
+        <th>Mode</th>
+        <th>Scalaire</th>
+        <th>Montant</th>
+        <th>Modifier</th>
+      </tr>
+    </table>
+
+    <div class="inputs1 cent">
+      <input
+        type="button"
+        name=""
+        value="Valider"
+        class="btn btn-primary"
+      /><img src="../../../assets/img/imgsys/icons/pdf.png" class="pdf" />
+    </div>
+
+    <div></div>
+  </div>
+</div>

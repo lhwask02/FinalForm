@@ -1,0 +1,56 @@
+#list_Cours div 
+{
+    border: 2px solid black;
+    border-radius: 8px;
+    text-align: center;
+    background-color: white;
+}
+#list_Cours div:hover 
+{
+cursor: pointer;
+background-color: lightgray;
+}
+#list_Cours 
+{
+    box-sizing: border-box;
+    background-color: #EEE;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    overflow-y: auto;
+    height: 100%;
+    max-height: 200px;
+    min-height: 200px;
+}
+#Ajouter_cours
+{
+    border-radius: 3px;
+}
+#divAddCour
+{
+    border: 1px dashed black;
+    border-radius: 3px;
+    position: relative;
+}
+img
+{
+ position: absolute;
+ right: 0px;
+ top: 0px;
+ width: 45px;
+ height: 30px;
+}
+img:hover
+{
+    cursor: pointer;
+} 
+/* .CourCarte
+{
+    background: linear-gradient(to bottom,rgb(128, 0, 32),rgb(179, 255, 0)); 
+}
+
+.CourAdded
+{
+    background: linear-gradient(to bottom,blue,yellow);
+
+} */

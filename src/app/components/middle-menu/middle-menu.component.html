@@ -1,0 +1,108 @@
+<div class="justify-content-center">
+  <div id="datespe1">
+    <form method="post">
+      <input type="checkbox" value="active" (change)="Onchange()" />
+      Active<br />
+      <label>date</label><br />
+      <input id="date" type="date" disabled /><br />
+      <label>heure</label><br />
+      <input id="time" type="time" disabled /><br />
+      <input
+        type="button"
+        value="Quitter"
+        class="btn btn-primary my-3"
+        (click)="close()"
+      /><br />
+    </form>
+  </div>
+  <!-- <div id="datespe2" *ngIf="active">
+    <form method="post" id="dselect">
+      <div class="">
+        <label class="flabel">Groupe:</label>
+        <div class="input-group mb-3 w-50">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-book icon"></i></span
+          ><select class="form-control"></select>
+        </div>
+      </div>
+    </form>
+    <label class="flabel">Groupe X:</label>
+    <div class="unilist1" id="dslist1">
+      <div *ngFor="let item of Listitem" class="listelem">
+        <img src="../../../assets/img/other/user.png" class="elempic" />
+        <label class="elemname">{{ item[0] }} </label>
+        <img src="../../../assets/img/imgsys/icons/close.png" class="close" />
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <div id="fsk"></div>
+    <div id="veil"></div>
+    <div id="seances"></div> -->
+
+  <!-- <div id="content">
+      <div class="schoolBackground"></div>
+      <h1 id="bienvenue">BIENVENUE A WOULOUJ</h1>
+      <div class="center">
+        <img
+          src="../../../assets/WouloujAPI/Photos/etablissement/etablissement.png"
+          id="mainLogo"
+        />
+      </div>
+    </div> -->
+</div>
+
+<!-- v2 -->
+<!-- <div class="justify-content-center">
+    <div id="datespe1" class="position-fixed" style="display: none">
+      <form method="post">
+        <input type="checkbox" value="active" (change)="Onchange()" />
+        Active<br />
+        <label>date</label><br />
+        <input id="date" type="date" disabled /><br />
+        <label>heure</label><br />
+        <input id="time" type="time" disabled /><br />
+        <input
+          type="button"
+          value="Quitter"
+          class="btn btn-primary my-3"
+          (click)="close()"
+        /><br />
+      </form>
+    </div>
+    <div id="datespe2" *ngIf="!active">
+      <form method="post" id="dselect">
+        <div class="">
+          <label class="flabel">Groupe:</label>
+          <div class="input-group mb-3 w-50">
+            <span class="input-group-text" id="basic-addon1">
+              <i class="fa fa-book icon"></i></span
+            ><select class="form-control"></select>
+          </div>
+        </div>
+      </form>
+      <label class="flabel">Groupe X:</label>
+      <div class="unilist1" id="dslist1">
+        <div *ngFor="let item of Listitem" class="listelem">
+          <img src="../../../assets/img/other/user.png" class="elempic" />
+          <label class="elemname">{{ item[0] }} </label>
+          <img src="../../../assets/img/imgsys/icons/close.png" class="close" />
+        </div>
+      </div>
+    </div>
+  
+    <div id="fsk"></div>
+    <div id="veil"></div>
+    <div id="seances"></div>
+  
+    <div id="content">
+      <div class="schoolBackground"></div>
+      <h1 id="bienvenue">BIENVENUE A WOULOUJ</h1>
+      <div class="center">
+        <img
+          src="../../../assets/WouloujAPI/Photos/etablissement/etablissement.png"
+          id="mainLogo"
+        />
+      </div>
+    </div>
+  </div> -->

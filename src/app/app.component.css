@@ -1,0 +1,24 @@
+
+
+.C
+{
+  /* width: 100vw; */
+  position: absolute;
+  z-index: 1000;
+  top: 10px;
+  left: 10px;
+}
+#black
+{
+   /* background: linear-gradient(to bottom,rgb(37,37,37) ,rgb(37,37,37));  */
+   height: 200vh;
+   width: 100vw;
+
+}
+@media screen and (min-width: 100px) {
+  #black {
+      height: 200vh;
+      width: 100vw;
+  }
+}
+ 

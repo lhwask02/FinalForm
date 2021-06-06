@@ -1,0 +1,36 @@
+@media screen and (max-width: 1000px) {
+    #datespe1
+    {
+        width: 180px;
+        top: 30%;
+        left: 25%;
+        right: 25%;
+        text-align: center;
+        color:#0000002b;
+        background-color: var(--color6);
+        /*border: 2px solid var(--color1);*/
+        border-radius:5px;
+        color:#5b5b5b;
+    }
+  
+  }
+  @media screen and (max-width: 300px) {
+    #datespe1
+    {
+        width: 180px;
+        top: 30%;
+        left: 20%;
+        text-align: center;
+        color:#0000002b;
+        background-color: var(--color6);
+        /*border: 2px solid var(--color1);*/
+        border-radius:5px;
+        color:#5b5b5b;
+    }
+  
+  }
+  .datespe1
+  {
+    position: absolute;
+    z-index: 100;
+  }

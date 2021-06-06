@@ -1,0 +1,709 @@
+<!-- Side Menu Exampl-->
+<div>
+  <div id="topMenu" class="bg-primary">
+    <ul id="menu">
+      <li (click)="openNav()"><i class="fa fa-bars"></i></li>
+      <li routerLink="/MainComponent" class="menuPage">
+        <img
+          src="../../../assets/img/imgsys/icons/white_home.png"
+          class="lefticons"
+        />Accueil
+      </li>
+      <!-- <li>Accueil</li>
+      <li>Deconnecter</li> -->
+    </ul>
+    <!-- <ul id="user">
+      <li>username</li>
+      <li>
+        <img
+          src="../../../assets/img/other/user.png"
+          alt="user"
+          style="height: 50px; margin-top: -5px"
+        />
+      </li>
+    </ul> -->
+  </div>
+  <!-- ☰ -->
+
+  <div id="mySidenav" class="sidenav">
+    <ul>
+      <li>
+        <div class="">
+          <div class="panel-group" id="accordion">
+            <div class="card bg-success mb-1" style="max-width: 100%">
+              <div
+                class="text-light"
+                data-toggle="collapse"
+                data-parent="#accordion"
+                href="#collapse1"
+              >
+                <div class="">
+                  <span class="px-1">Gestion administrative</span>
+                  <img
+                    style="display: inline"
+                    src="../../../assets/img/imgsys/icons/admin.png"
+                  />
+                  <span class="right" style="font-size: 30px; cursor: pointer">
+                    <i
+                      class="fa fa-bars"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapse1"
+                    ></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div id="collapse1" class="ml-4 panel-collapse collapse in">
+              <div class="panel-body">
+                <div class="card bg-secondary mb-1" style="max-width: 100%">
+                  <div class="text-dark" routerLink="/SchoolInfoComponent">
+                    <div class="">
+                      <span>Information de l'ecole</span>
+                      <img
+                        style="display: inline"
+                        src="../../../assets/img/imgsys/icons/info.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="text-light card bg-success mb-1"
+                  style="max-width: 100%"
+                  data-toggle="collapse"
+                  data-parent="#accordion"
+                  href="#collapse12"
+                >
+                  <div class="text-light">
+                    <div class="">
+                      <span>Gestion ressources humaines</span>
+                      <img
+                        style="display: inline"
+                        src="../../../assets/img/imgsys/icons/hr.png"
+                      />
+                      <span
+                        class="right"
+                        style="font-size: 30px; cursor: pointer"
+                      >
+                        <i
+                          class="fa fa-bars"
+                          data-toggle="collapse"
+                          data-parent="#accordion"
+                          href="#collapse12"
+                        ></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div id="collapse12" class="ml-4 panel-collapse collapse in">
+                  <div class="panel-body">
+                    <div
+                      class="text-light card bg-success mb-1"
+                      style="max-width: 100%"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapse121"
+                    >
+                      <div class="text-light">
+                        <div class="">
+                          <span>Gerer les Enseignants</span>
+                          <img
+                            style="display: inline"
+                            src="../../../assets/img/imgsys/icons/hr.png"
+                          />
+                          <span
+                            class="right"
+                            style="font-size: 30px; cursor: pointer"
+                          >
+                            <i
+                              class="fa fa-bars"
+                              data-toggle="collapse"
+                              data-parent="#accordion"
+                              href="#collapse121"
+                            ></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      id="collapse121"
+                      class="ml-4 panel-collapse collapse in"
+                    >
+                      <div class="panel-body">
+                        <div
+                          class="card bg-secondary mb-1"
+                          style="max-width: 100%"
+                        >
+                          <div
+                            class="text-dark"
+                            routerLink="/AjouterEnseignantComponent"
+                          >
+                            <div class="">
+                              <span>AJOUTER ENSEIGNANT</span>
+                              <img
+                                style="display: inline"
+                                src="../../../assets/img/imgsys/icons/addentry.png"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="card bg-secondary mb-1"
+                          style="max-width: 100%"
+                          routerLink="/ListEnseignantComponent"
+                        >
+                          <div class="text-dark">
+                            <div class="">
+                              <span>LIST DES ENSEIGNANTS</span>
+                              <img
+                                style="display: inline"
+                                src="../../../assets/img/imgsys/icons/list.png"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="text-light card bg-success mb-1"
+                      style="max-width: 100%"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapse122"
+                    >
+                      <div class="text-light">
+                        <div class="">
+                          <span>Gerer les assistants</span>
+                          <img
+                            style="display: inline"
+                            src="../../../assets/img/imgsys/icons/hr.png"
+                          />
+                          <span
+                            class="right"
+                            style="font-size: 30px; cursor: pointer"
+                          >
+                            <i
+                              class="fa fa-bars"
+                              data-toggle="collapse"
+                              data-parent="#accordion"
+                              href="#collapse122"
+                            ></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      id="collapse122"
+                      class="ml-4 panel-collapse collapse in"
+                    >
+                      <div class="panel-body">
+                        <div
+                          class="card bg-secondary mb-1"
+                          style="max-width: 100%"
+                        >
+                          <div class="text-dark">
+                            <div class="">
+                              <span>AJOUTER ASSISTANT</span>
+                              <img
+                                style="display: inline"
+                                src="../../../assets/img/imgsys/icons/addentry.png"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="card bg-secondary mb-1"
+                          style="max-width: 100%"
+                        >
+                          <div class="text-dark">
+                            <div class="">
+                              <span>AFFICHER LES ASSISTANTS</span>
+                              <img
+                                style="display: inline"
+                                src="../../../assets/img/imgsys/icons/list.png"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card bg-secondary mb-1" style="max-width: 100%">
+                  <div class="text-dark">
+                    <div class="">
+                      <span>Gestion des cartes</span>
+                      <img
+                        style="display: inline"
+                        src="../../../assets/img/imgsys/icons/credit.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-success mb-1" style="max-width: 100%">
+              <div
+                class="text-light"
+                data-toggle="collapse"
+                data-parent="#accordion"
+                href="#collapse2"
+              >
+                <div class="">
+                  <span class="px-1">Gestion Pedagogique</span>
+                  <img
+                    style="display: inline"
+                    src="../../../assets/img/imgsys/icons/pedag.png"
+                  />
+
+                  <span class="right" style="font-size: 30px; cursor: pointer">
+                    <i
+                      class="fa fa-bars"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapse2"
+                    ></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div id="collapse2" class="ml-4 panel-collapse collapse in">
+              <div class="panel-body">
+                <div
+                  class="text-light card bg-success mb-1"
+                  style="max-width: 100%"
+                  data-toggle="collapse"
+                  data-parent="#accordion"
+                  href="#collapse21"
+                >
+                  <div class="text-light">
+                    <div class="">
+                      <span>Gerer les Elèves</span>
+                      <img
+                        style="display: inline"
+                        src="../../../assets/img/imgsys/icons/group.png"
+                      />
+                      <span
+                        class="right"
+                        style="font-size: 30px; cursor: pointer"
+                      >
+                        <i
+                          class="fa fa-bars"
+                          data-toggle="collapse"
+                          data-parent="#accordion"
+                          href="#collapse21"
+                        ></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div id="collapse21" class="ml-4 panel-collapse collapse in">
+                  <div class="panel-body">
+                    <div class="card bg-secondary mb-1" style="max-width: 100%">
+                      <div class="text-dark">
+                        <div class="">
+                          <span>AJOUTER ELEVE</span>
+                          <img
+                            style="display: inline"
+                            src="../../../assets/img/imgsys/icons/addentry.png"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card bg-secondary mb-1" style="max-width: 100%">
+                      <div class="text-dark">
+                        <div class="">
+                          <span>AFFICHER LES ELEVES</span>
+                          <img
+                            style="display: inline"
+                            src="../../../assets/img/imgsys/icons/hr.png"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="text-light card bg-success mb-1"
+                  style="max-width: 100%"
+                  data-toggle="collapse"
+                  data-parent="#accordion"
+                  href="#collapse22"
+                >
+                  <div class="text-light">
+                    <div class="">
+                      <span>Gerer Apprentissages </span>
+                      <img
+                        style="display: inline"
+                        src="../../../assets/img/imgsys/icons/learn.png"
+                      />
+                      <span
+                        class="right"
+                        style="font-size: 30px; cursor: pointer"
+                      >
+                        <i
+                          class="fa fa-bars"
+                          data-toggle="collapse"
+                          data-parent="#accordion"
+                          href="#collapse22"
+                        ></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div id="collapse22" class="ml-4 panel-collapse collapse in">
+                  <div class="panel-body">
+                    <div class="card bg-secondary mb-1" style="max-width: 100%">
+                      <div
+                        class="text-dark"
+                        routerLink="/GestionSallesComponent"
+                      >
+                        <div class="">
+                          <span>GERER LES SALLES</span>
+                          <img
+                            style="display: inline"
+                            src="../../../assets/img/imgsys/icons/room.png"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="card bg-secondary mb-1"
+                      style="max-width: 100%"
+                      routerLink="/GererProgrammesComponent"
+                    >
+                      <div class="text-dark">
+                        <div class="">
+                          <span>GERER LES PROGRAMMES</span>
+                          <img
+                            style="display: inline"
+                            src="../../../assets/img/imgsys/icons/module.png"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="card bg-secondary mb-1"
+                      style="max-width: 100%"
+                      routerLink="/AjouterGroupeComponent"
+                    >
+                      <div class="text-dark" routerLink="/SchoolInfoComponent">
+                        <div class="">
+                          <span>GERER LES GROUPES</span>
+                          <img
+                            style="display: inline"
+                            src="../../../assets/img/imgsys/icons/group.png"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="card bg-secondary mb-1"
+                      style="max-width: 100%"
+                      routerLink="/AssociationEleveGroupeComponent"
+                    >
+                      <div class="text-dark">
+                        <div class="">
+                          <span>ASSOCIER LES ELEVES</span>
+                          <img
+                            style="display: inline"
+                            src="../../../assets/img/imgsys/icons/associate.png"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="card bg-secondary mb-1"
+                      style="max-width: 100%"
+                      routerLink="/GererEmploiComponent"
+                    >
+                      <div class="text-dark">
+                        <div class="">
+                          <span>PLANIFIER LES EMPLOIS</span>
+                          <img
+                            style="display: inline"
+                            src="../../../assets/img/imgsys/icons/plan.png"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="card bg-secondary mb-1"
+                  style="max-width: 100%"
+                  routerLink="/HistoriquePresenceComponent"
+                >
+                  <div class="text-dark">
+                    <div class="">
+                      <span>Historique de présence</span>
+                      <img
+                        style="display: inline"
+                        src="../../../assets/img/imgsys/icons/credit.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="card bg-secondary mb-1" style="max-width: 100%">
+                  <div class="text-dark">
+                    <div class="">
+                      <span>Badgement de présence</span>
+                      <img
+                        style="display: inline"
+                        src="../../../assets/img/imgsys/icons/miss.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-success mb-1" style="max-width: 100%">
+              <div
+                class="text-light"
+                data-toggle="collapse"
+                data-parent="#accordion"
+                href="#collapse3"
+              >
+                <div class="">
+                  <span class="px-1"> Gestion financiere</span>
+                  <img
+                    style="display: inline"
+                    src="../../../assets/img/imgsys/icons/finance.png"
+                  />
+
+                  <span class="right" style="font-size: 30px; cursor: pointer">
+                    <i
+                      class="fa fa-bars"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapse3"
+                    ></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div id="collapse3" class="ml-4 panel-collapse collapse in">
+              <div class="panel-body">
+                <div
+                  class="card bg-secondary mb-1"
+                  style="max-width: 100%"
+                  routerLink="/FomulaireDePaiementComponent"
+                >
+                  <div class="text-dark">
+                    <div class="">
+                      <span>Facturation</span>
+                      <img
+                        style="display: inline"
+                        src="../../../assets/img/imgsys/icons/bill.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="card bg-secondary mb-1"
+                  style="max-width: 100%"
+                  routerLink="/PaiementDesSalairesAComponent"
+                >
+                  <div class="text-dark">
+                    <div class="">
+                      <span> Paiement des salaires</span>
+                      <img
+                        style="display: inline"
+                        src="../../../assets/img/imgsys/icons/miss.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="card bg-secondary mb-1"
+                  style="max-width: 100%"
+                  routerLink="/SituationDesPaiementsComponent"
+                >
+                  <div class="text-dark">
+                    <div class="">
+                      <span>Gestion des Salaires</span>
+                      <img
+                        style="display: inline"
+                        src="../../../assets/img/imgsys/icons/salary.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="card bg-success mb-1"
+                  style="max-width: 100%"
+                  data-toggle="collapse"
+                  data-parent="#accordion"
+                  href="#collapse31"
+                >
+                  <div class="text-light">
+                    <div class="">
+                      <span>Gestion des Depenses</span>
+                      <img
+                        style="display: inline"
+                        src="../../../assets/img/imgsys/icons/spent.png"
+                      />
+                      <span
+                        class="right"
+                        style="font-size: 30px; cursor: pointer"
+                      >
+                        <i
+                          class="fa fa-bars"
+                          data-toggle="collapse"
+                          data-parent="#accordion"
+                          href="#collapse31"
+                        ></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div id="collapse31" class="ml-4 panel-collapse collapse in">
+                  <div class="panel-body">
+                    <div class="card bg-secondary mb-1" style="max-width: 100%">
+                      <div class="text-dark">
+                        <div class="">
+                          <span>GESTION DES DEPENSES</span>
+                          <img
+                            style="display: inline"
+                            src="../../../assets/img/imgsys/icons/absent.png"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card bg-secondary mb-1" style="max-width: 100%">
+                      <div class="text-dark">
+                        <div class="">
+                          <span>LISTE DES DEPENSES</span>
+                          <img
+                            style="display: inline"
+                            src="../../../assets/img/imgsys/icons/absentg.png"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-success mb-1" style="max-width: 100%">
+              <div
+                class="text-light"
+                data-toggle="collapse"
+                data-parent="#accordion"
+                href="#collapse4"
+              >
+                <div class="">
+                  <span class="px-1">Statistiques</span>
+                  <img
+                    style="display: inline"
+                    src="../../../assets/img/imgsys/icons/stats.png"
+                  />
+
+                  <span class="right" style="font-size: 30px; cursor: pointer">
+                    <i
+                      class="fa fa-bars"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapse4"
+                    ></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div id="collapse4" class="ml-4 panel-collapse collapse in">
+              <div class="panel-body">
+                <div class="card bg-secondary mb-1" style="max-width: 100%">
+                  <div class="text-dark">
+                    <div class="">
+                      <span>Recette et Impayés</span>
+                      <img
+                        style="display: inline"
+                        src="../../../assets/img/imgsys/icons/salary.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="card bg-secondary mb-1" style="max-width: 100%">
+                  <div class="text-dark">
+                    <div class="">
+                      <span>Dépenses</span>
+                      <img
+                        style="display: inline"
+                        src="../../../assets/img/imgsys/icons/bill.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-success mb-1" style="max-width: 100%">
+              <div
+                class="text-light"
+                data-toggle="collapse"
+                data-parent="#accordion"
+                href="#collapse5"
+              >
+                <div class="">
+                  <span class="px-1">E-Learning</span>
+                  <img
+                    style="display: inline"
+                    src="../../../assets/img/imgsys/icons/elearning.png"
+                  />
+
+                  <span class="right" style="font-size: 30px; cursor: pointer">
+                    <i
+                      class="fa fa-bars"
+                      data-toggle="collapse"
+                      data-parent="#accordion"
+                      href="#collapse5"
+                    ></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div id="collapse5" class="ml-4 panel-collapse collapse in">
+              <div class="panel-body">
+                <div class="card bg-secondary mb-1" style="max-width: 100%">
+                  <div class="text-dark">
+                    <div class="">
+                      <span>Gestion des documents</span>
+                      <img
+                        style="display: inline"
+                        src="../../../assets/img/imgsys/icons/documents.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-success mb-1 py-2" style="max-width: 100%">
+              <div class="text-light">
+                <div class="">
+                  <span class="px-1">Parametres</span>
+                  <img
+                    style="display: inline"
+                    src="../../../assets/img/imgsys/icons/settings.png"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <a class="closebtn" (click)="closeNav()">
+          <i class="fa fa-close"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- <div id="main">
+    <span style="font-size: 30px; cursor: pointer">
+      <i class="fa fa-bars"></i>
+    </span>
+  </div> -->
+</div>
+
+<!-- <span class="color-light">☰</span> -->
+<!-- navbar-primary -->

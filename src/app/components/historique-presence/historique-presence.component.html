@@ -1,0 +1,116 @@
+<div id="content">
+  <form method="post" class="row justify-content-center">
+    <h1 class="col-md-12 col-sm-12 col-xs-12 text-center my-3">
+      Historique de Présence
+    </h1>
+    <!-- <div class="col-md-12 col-sm-12 col-xs-12 switch">
+      <label class="choice selected btn btn-primary" id="presence"
+        >Présence</label
+      ><label class="choice btn btn-secondary" id="absence">Absence</label>
+    </div> -->
+    <div class="col-md-5 col-sm-12 col-xs-12">
+      <label class="flabel">Matricule </label>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-id-card icon"></i></span
+        ><input type="text" id="matricule" class="form-control" />
+      </div>
+    </div>
+    <div class="col-md-5 col-sm-12 col-xs-12">
+      <label class="flabel">Groupe </label>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-id-card icon"></i></span
+        ><select id="groupe" class="form-control">
+          <option id="aucun">Aucun</option>
+          <option
+            *ngFor="let groupe of listGroupapi"
+            id="{{ groupe.Programme.Intitule + groupe.Libelle }}"
+          >
+            {{ groupe.Programme.Intitule + groupe.Libelle }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-5 col-sm-12 col-xs-12">
+      <label class="flabel">De : </label>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-calendar icon"></i></span
+        ><input type="date" id="from" class="form-control" />
+      </div>
+    </div>
+    <div class="col-md-5 col-sm-12 col-xs-12">
+      <label class="flabel">A : </label>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"
+          ><i class="fa fa-calendar icon"></i></span
+        ><input type="date" id="to" class="form-control" />
+      </div>
+    </div>
+    <div class="col-md-5 col-sm-12 col-xs-12">
+      <label class="flabel">Présence </label>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-id-card icon"></i></span
+        ><select id="etat" class="form-control" (change)="Filter($event)">
+          <option id="Tout">Tout</option>
+          <option id="Present">Présent(e)</option>
+          <option id="Absent">Absent(e)</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-5 col-sm-12 col-xs-12"></div>
+    <div class="col-md-6 col-sm-12 col-xs-12 text-center my-3">
+      <input
+        type="button"
+        id="submit"
+        value="AFFICHER"
+        class="btn btn-primary"
+      />
+    </div>
+
+    <div id="table" class="col-md-10 col-sm-10 col-xs-10">
+      <table
+        class="col-md-12 col-sm-10 col-xs-10 table table-striped table-hover"
+      >
+        <thead class="bg-primary">
+          <tr>
+            <th>Adherent</th>
+            <th>Période</th>
+            <th>Temps</th>
+            <th>Etat</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            *ngFor="let pres of listPresenceFiltrer; let i = index"
+            id="{{ i }}"
+          >
+            <td class="adherent" [contentEditable]="true">
+              {{ pres[1] + " " + pres[2] }}
+            </td>
+            <td [contentEditable]="true" class="periode">
+              {{ pres[3] }}
+            </td>
+            <td class="temps" [contentEditable]="true">{{ pres[4] }}</td>
+            <td class="etat" [contentEditable]="true" editable="options">
+              {{ pres[5] }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </form>
+  <div>
+    <div class="fixed-bottom">
+      <input
+        class="btn btn-primary"
+        type="button"
+        value="INFORMER"
+        id="informer"
+        (click)="Notifier()"
+      />
+    </div>
+  </div>
+</div>

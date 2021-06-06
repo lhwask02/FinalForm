@@ -1,0 +1,21 @@
+#Liste
+{background-color: #EEE;}
+.carte
+{
+    border: 2px solid black;
+    margin: 3px;
+    border-radius: 8px;
+    background-color:WHITE;
+    position: relative;
+}
+img
+{
+    width: 30px;height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+img:hover{cursor: pointer;}
+.blk
+{color: black;}

@@ -1,0 +1,190 @@
+<div id="content">
+  <h1>Formulaire de Paiement</h1>
+  <form method="post">
+    <div class="input-group">
+      <label class="flabel1">Etudiant:</label>
+      <span class="input-group-text"><i class="fa fa-id-card icon"></i> </span
+      ><input
+        type="text"
+        name="matricule"
+        id="adherent"
+        matricule="0004857835"
+        class="form-control"
+      />
+    </div>
+    <div class="inputs"><label class="flabel1">Facture à payer:</label></div>
+    <div class="inputs"><label class="flabel1">Details:</label></div>
+    <div id="listmod">
+      <div class="leftlist doublelist">
+        <div
+          class="factureelem unpaid"
+          activation="1023"
+          id="58"
+          data-label="Scolarité"
+          type="tarif"
+          tarif="1500"
+          paye="11500"
+        ></div>
+        <div
+          class="factureelem inactive"
+          activation="0"
+          id="57"
+          data-label="Transport"
+          type="optional"
+          tarif="100"
+          paye="100"
+        ></div>
+        <div
+          class="factureelem unpaid"
+          activation="1023"
+          id="56"
+          data-label="Cantine"
+          type="optional"
+          tarif="100"
+          paye="700"
+        ></div>
+        <div
+          class="factureelem paid"
+          activation="1023"
+          id="55"
+          data-label="Inscription"
+          type="fixe"
+          tarif="100"
+          paye="100"
+        ></div>
+      </div>
+
+      <div class="rightlist doublelist">
+        <div id="sub-facture">
+          <label class="paid" title="paiement complet">Séptembre</label
+          ><label class="paid" title="paiement complet">Octobre</label
+          ><label class="paid" title="paiement complet">Novembre</label
+          ><label class="paid" title="paiement complet">Décembre</label
+          ><label class="paid" title="paiement complet">Janvier</label
+          ><label class="paid" title="paiement complet">Février</label
+          ><label class="paid" title="paiement complet">Mars</label
+          ><label class="half" title="paiement partiel">Avril</label
+          ><label class="unpaid" title="non payé">Mai</label
+          ><label class="unpaid" title="non payé">Juin</label>
+        </div>
+      </div>
+    </div>
+
+    <div id="facturesExport"></div>
+    <div class="exportBar">
+      <img
+        src="../../../assets/img/imgsys/icons/pdf.png"
+        class="exportImg"
+        id="exportPdf"
+      />
+    </div>
+    <div
+      id="pay"
+      class="paiemodal row justify-content-center"
+      style="display: none"
+    >
+      <img
+        src="../../../assets/img/imgsys/icons/close.png"
+        class="closeWin"
+        (click)="Close()"
+      />
+      <div class="inputs1">
+        <label class="flabel1">Date de Debut pour cette facture:</label>
+        <div>
+          <i class="fa fa-id-card icon"></i
+          ><input type="date" id="dateDebut" disabled />
+        </div>
+      </div>
+      <div class="inputs1" id="finDiv">
+        <label class="flabel1">Date de fin pour cette facture:</label>
+        <div>
+          <i class="fa fa-id-card icon"></i
+          ><input type="date" id="dateFin" /><input
+            type="button"
+            id="fixerdate"
+            value="FIXER UNE DATE DE FIN"
+          />
+        </div>
+      </div>
+      <div class="inputs1" id="heuresDiv">
+        <label class="flabel1">Heures totales:</label>
+        <div>
+          <i class="fa fa-id-card icon"></i
+          ><input type="number" id="totalHeures" /><input
+            type="button"
+            id="fixerheures"
+            value="FIXER LE NOMBRE D'HEURES"
+          />
+        </div>
+      </div>
+
+      <div class="col-md-8 col-sm-12 col-xs-12">
+        <label class="flabel1">Tarif mensuel(Dhs):</label>
+        <div class="input-group">
+          <span class="input-group-text">
+            <i class="fa fa-money icon"></i>
+          </span>
+          <input type="number" id="tarif" step="0.1" class="form-control" />
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-10 col-xs-10 mt-3 text-center">
+        <input
+          type="button"
+          id="prixSpecial"
+          value="DONNER UN PRIX SPECIAL"
+          class="btn btn-primary"
+        />
+      </div>
+      <div class="col-md-8 col-sm-12 col-xs-12">
+        <label class="flabel1">Montant A payer (Dhs):</label>
+        <div class="input-group">
+          <span class="input-group-text">
+            <i class="fa fa-money icon"></i> </span
+          ><input
+            type="number"
+            id="montantAPayer"
+            step="0.1"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="col-md-8 col-sm-12 col-xs-12">
+        <label class="flabel1">Payer (Dhs):</label>
+        <div class="input-group">
+          <span class="input-group-text">
+            <i class="fa fa-money icon"></i> </span
+          ><input
+            type="number"
+            id="montantPaye"
+            step="0.1"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="inputs1">
+        <label class="flabel1">Reste a Payer (Dhs):</label>
+        <div>
+          <i class="fa fa-money icon"></i
+          ><input type="number" id="montantReste" step="0.1" />
+        </div>
+      </div>
+
+      <div class="col-md-7 col-sm-12 col-xs-12 text-center mt-3">
+        <input
+          type="button"
+          id="submit"
+          value="VALIDER"
+          class="btn btn-primary"
+        />
+      </div>
+      <div class="col-md-7 col-sm-12 col-xs-12 text-center mt-3">
+        <input
+          type="button"
+          id="activation"
+          value="ACTIVER"
+          class="btn btn-primary"
+        />
+      </div>
+    </div>
+  </form>
+</div>

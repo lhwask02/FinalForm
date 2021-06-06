@@ -1,0 +1,58 @@
+#select
+{
+    width: 85%;
+}
+  @media screen and (min-width: 300px) {
+    #select
+    {
+        width: 80%;
+    }
+  }
+   
+  @media screen and (min-width: 600px) {
+    #select
+    {
+        width: 95%;
+    }
+  }
+  @media screen and (min-width: 1001px) {
+    #select
+    {
+        width: 75%;
+    }
+  }
+@media screen and (max-width: 1000px) {
+    #select
+    {
+        width: 75%;
+    }
+  }
+  @media screen and (max-width: 299px) {
+    #select
+    {
+        width: 65%;
+    }
+  }
+#List
+{
+    height: 300px;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: rgb(228, 228, 228);
+}
+   
+.carte
+{
+    position: relative;
+}
+img
+{
+    width: 30px;height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+img:hover{cursor: pointer;}
+.blk
+{color: black;}

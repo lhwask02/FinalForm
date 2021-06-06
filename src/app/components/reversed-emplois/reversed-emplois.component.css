@@ -1,0 +1,44 @@
+table
+{
+    border-collapse: separate;  
+}
+th {
+    background-color:#3f7cd6;
+    border-radius: 8px;
+    text-align: justify;
+}
+td{
+    background-color:grey;
+    border-radius: 8px;
+}
+td:hover{
+    background-color:rgb(85, 85, 202);
+    cursor: pointer;
+}
+ #tab2
+{
+    overflow-x:auto;
+}
+ 
+#InfoSeance
+{
+    border: 1px solid black;
+    border-radius: 3px;
+    position: relative;
+}
+img
+{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+img:hover,i:hover
+{
+  cursor: pointer;
+}
+#edit
+{border: solid 1px black;}
+
+ 

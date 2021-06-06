@@ -1,0 +1,116 @@
+/* img
+
+.carte
+{
+    border: 1px solid white ;
+    border-radius: 3px;
+    margin: 2px;
+}
+.List
+{
+    position: relative;
+    box-sizing: border-box;
+
+}
+#close
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#transfer
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+} */
+
+
+
+#groupeE{
+    height:200px;
+    max-height: 200px;
+    overflow: auto;
+}
+.unilt {
+    /* display: table;
+    float: left; */
+    height: 100%;
+    width: 100%;
+    /* background:var(--color6); */
+}
+.listel {
+    /* float: left; */
+    background-color: white;
+    /* height: 60px; */
+    /* margin: 5px; */
+    border: 2px solid black;
+    /* width: 20%; */
+    /* font-size: 18px;
+    font-weight: 600px; */
+    border-radius: 5px;
+}
+.elemp {
+    /* float: left; */
+    width: 45px;
+    height: 45px;
+    /* margin-top: 1%;
+    margin-left: 1%;
+    padding: 1%; */
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.elemn {
+    /* float: right;
+    width: 70%; */
+    text-align: left;
+}
+ 
+/* .listel .elemn {
+     float:left;
+    width: 60%;
+} */
+/* .elemBtn{
+    float: right;
+    height: 100%;
+    width: 12%;
+}
+.clos {
+    float: right;
+    height: 50%;
+    width: 100%;
+}
+.tran {
+    float: right;
+    height: 50%;
+    width: 100%;
+} */
+.tran:hover,.clos:hover,.listelem .elemn:hover {
+    cursor: pointer;
+}
+img
+{
+    width: 40px;
+    height: 40px;
+}
+img:hover
+{
+    cursor: pointer;
+}
+.listel
+{
+    position: relative;
+    height: 80px;
+}
+.clos
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.tran
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

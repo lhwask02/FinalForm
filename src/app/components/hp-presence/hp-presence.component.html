@@ -1,0 +1,163 @@
+<div id="content" class="row">
+  <h1 class="col-md-12 col-sm-12 col-xs-12 text-center my-3">
+    Historique de Présence
+  </h1>
+  <form method="post">
+    <div class="switch">
+      <label class="choice selected btn btn-primary" id="presence"
+        >Présence</label
+      ><label class="choice btn btn-secondary" id="absence">Absence</label>
+    </div>
+    <div class="">
+      <label class="flabel">Matricule </label>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-id-card icon"></i></span
+        ><input type="text" id="matricule" class="form-control" />
+      </div>
+    </div>
+    <div class="">
+      <label class="flabel">Groupe </label>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-id-card icon"></i></span
+        ><select id="groupe" class="form-control">
+          <option id="aucun">Aucun</option>
+          <option id="39">CP</option>
+          <option id="38">CE2</option>
+          <option id="36">CE5</option>
+          <option id="35">CE3 B</option>
+          <option id="34">CE3 A</option>
+        </select>
+      </div>
+    </div>
+    <div class="">
+      <label class="flabel">De : </label>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-calendar icon"></i></span
+        ><input type="date" id="from" class="form-control" />
+      </div>
+    </div>
+    <div class="">
+      <label class="flabel">A : </label>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"
+          ><i class="fa fa-id-card icon"></i></span
+        ><input type="date" id="to" class="form-control" />
+      </div>
+    </div>
+    <div class="">
+      <label class="flabel">Présence </label>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-id-card icon"></i></span
+        ><select id="etat" class="form-control">
+          <option id="tout">Tout</option>
+          <option id="present">présent(e)</option>
+          <option id="absent">absent(e)</option>
+        </select>
+      </div>
+    </div>
+    <div class="inputs1 cent">
+      <input type="button" id="submit" value="AFFICHER" />
+    </div>
+    <table class="liste">
+      <tr>
+        <th>Adherent</th>
+        <th>Période</th>
+        <th>Temps</th>
+        <th>Etat</th>
+      </tr>
+      <tr id="101">
+        <td class="adherent" editable="yes">Imane Idrissi</td>
+        <td class="periode" editable="yes">Matin</td>
+        <td class="temps" editable="yes">2021-05-31 09:57:00</td>
+        <td class="etat" editable="options">present(e)</td>
+      </tr>
+      <tr id="100">
+        <td class="adherent" editable="yes">Reda Samihi</td>
+        <td class="periode" editable="yes">Après midi</td>
+        <td class="temps" editable="yes">2021-05-24 13:35:00</td>
+        <td class="etat" editable="options">present(e)</td>
+      </tr>
+      <tr id="99">
+        <td class="adherent" editable="yes">Imane Idrissi</td>
+        <td class="periode" editable="yes">Après midi</td>
+        <td class="temps" editable="yes">2021-05-24 13:13:00</td>
+        <td class="etat" editable="options">present(e)</td>
+      </tr>
+      <tr id="98">
+        <td class="adherent" editable="yes">Zineb Aamiri</td>
+        <td class="periode" editable="yes">Après midi</td>
+        <td class="temps" editable="yes">2021-05-19 14:03:00</td>
+        <td class="etat" editable="options">present(e)</td>
+      </tr>
+      <tr id="97">
+        <td class="adherent" editable="yes">Reda Samihi</td>
+        <td class="periode" editable="yes">Après midi</td>
+        <td class="temps" editable="yes">2021-05-19 14:03:00</td>
+        <td class="etat" editable="options">present(e)</td>
+      </tr>
+      <tr id="96">
+        <td class="adherent" editable="yes">ilyas Mohammadi</td>
+        <td class="periode" editable="yes">Après midi</td>
+        <td class="temps" editable="yes">2021-05-19 13:54:00</td>
+        <td class="etat" editable="options">present(e)</td>
+      </tr>
+      <tr id="95">
+        <td class="adherent" editable="yes">Zineb Aamiri</td>
+        <td class="periode" editable="yes">Après midi</td>
+        <td class="temps" editable="yes">2021-05-10 13:39:00</td>
+        <td class="etat" editable="options">present(e)</td>
+      </tr>
+      <tr id="94">
+        <td class="adherent" editable="yes">Reda Samihi</td>
+        <td class="periode" editable="yes">Après midi</td>
+        <td class="temps" editable="yes">2021-05-10 13:38:00</td>
+        <td class="etat" editable="options">present(e)</td>
+      </tr>
+      <tr id="93">
+        <td class="adherent" editable="yes">ilyas Mohammadi</td>
+        <td class="periode" editable="yes">Après midi</td>
+        <td class="temps" editable="yes">2021-05-10 13:08:00</td>
+        <td class="etat" editable="options">present(e)</td>
+      </tr>
+      <tr id="92">
+        <td class="adherent" editable="yes">ilyas Mohammadi</td>
+        <td class="periode" editable="yes">Après midi</td>
+        <td class="temps" editable="yes">2021-05-03 12:50:00</td>
+        <td class="etat" editable="options">present(e)</td>
+      </tr>
+      <tr id="90">
+        <td class="adherent" editable="yes">Zineb Aamiri</td>
+        <td class="periode" editable="yes">Après midi</td>
+        <td class="temps" editable="yes">2021-04-07 14:28:00</td>
+        <td class="etat" editable="options">present(e)</td>
+      </tr>
+      <tr id="89">
+        <td class="adherent" editable="yes">Reda Samihi</td>
+        <td class="periode" editable="yes">Matin</td>
+        <td class="temps" editable="yes">2021-03-09 09:00:00</td>
+        <td class="etat" editable="options">present(e)</td>
+      </tr>
+      <tr id="87">
+        <td class="adherent" editable="yes">Reda Samihi</td>
+        <td class="periode" editable="yes">Matin</td>
+        <td class="temps" editable="yes">2021-03-09 09:00:00</td>
+        <td class="etat" editable="options">present(e)</td>
+      </tr>
+      <tr id="84">
+        <td class="adherent" editable="yes">ilyas Mohammadi</td>
+        <td class="periode" editable="yes">Après midi</td>
+        <td class="temps" editable="yes">2021-02-09 12:38:00</td>
+        <td class="etat" editable="options">present(e)</td>
+      </tr>
+    </table>
+  </form>
+  <div>
+    <div class="inputs1 cent">
+      <input type="button" value="INFORMER" id="informer" />
+    </div>
+  </div>
+</div>

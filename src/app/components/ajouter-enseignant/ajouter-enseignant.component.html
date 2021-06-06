@@ -1,0 +1,267 @@
+<form id="content" method="post" class="container">
+  <div class="row justify-content-center">
+    <h1 class="col-md-12 col-sm-12 col-xs-12 text-center my-3">
+      Ajouter Enseignant
+    </h1>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="row justify-content-center">
+        <div class="col-md-9 col-sm-12 col-xs-12">
+          <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <label class="fw-bold">Nom:</label>
+              <div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">
+                    <i class="fa fa-user icon"></i>
+                  </span>
+                  <input type="text" class="form-control" id="nom" name="nom" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <label class="fw-bold">Prenom:</label>
+              <div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">
+                    <i class="fa fa-user icon"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="prenom"
+                    name="prenom"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <label class="fw-bold">N° Tel:</label>
+              <div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">
+                    <i class="fa fa-phone icon"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="tel"
+                    id="numTele"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <label class="fw-bold">Email:</label>
+              <div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">
+                    <i class="fa fa-envelope icon"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <label class="fw-bold">Salaire de Base:</label>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"
+                  ><i class="fa fa-money icon"></i
+                ></span>
+                <input
+                  type="number"
+                  class="form-control"
+                  name="salaire"
+                  id="salaire"
+                  min="1000"
+                  step="100"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-12 col-xs-12">
+          <div class="text-center">
+            <div id="Picture">
+              <img
+                class="picture"
+                id="image"
+                src="../../../../assets/img/imgsys/scheduleBackground.png"
+                alt="Pict"
+              />
+              <div class="row my-2" id="Load">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <div class="Sel row">
+                    <span class="mt-1"><i class="fa fa-camera"></i></span>
+                    <div class="Sel">
+                      <input
+                        class="btn btn-primary"
+                        type="button"
+                        value="Choisir image"
+                        onclick="document.getElementById('selectedFile').click();"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <input
+                  type="file"
+                  id="selectedFile"
+                  style="display: none"
+                  class="form-control"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 text-center mt-1">
+      <input
+        type="submit"
+        value="Ajouter"
+        class="btn btn-primary"
+        id="submit"
+      />
+    </div>
+  </div>
+</form>
+
+<!-- Version 2-->
+<!-- <form id="content" method="post" class="container">
+  <div class="row justify-content-center">
+    <h1 class="col-md-12 col-sm-12 col-xs-12 text-center my-3">
+      Ajouter Enseignant
+    </h1>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="row justify-content-center">
+        <div class="col-md-9 col-sm-12 col-xs-12">
+          <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12 inputs">
+              <label class="fw-bold">Nom:</label>
+              <div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">
+                    <i class="fa fa-user icon"></i>
+                  </span>
+                  <input type="text" class="form-control" id="nom" name="nom" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-2"></div>
+            <div class="col-md-4 col-sm-6 col-xs-12 inputs">
+              <label class="fw-bold">Prenom:</label>
+              <div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">
+                    <i class="fa fa-user icon"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="prenom"
+                    name="prenom"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12"></div>
+            <div class="col-md-4 col-sm-6 col-xs-12 inputs">
+              <label class="fw-bold">N° Tel:</label>
+              <div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">
+                    <i class="fa fa-phone icon"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="tel"
+                    id="numTele"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-2"></div>
+            <div class="col-md-4 col-sm-6 col-xs-12 inputs">
+              <label class="fw-bold">Email:</label>
+              <div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">
+                    <i class="fa fa-envelope icon"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12"></div>
+            <div class="col-md-4 col-sm-6 col-xs-12 inputs">
+              <label class="fw-bold">Salaire de Base:</label>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"
+                  ><i class="fa fa-money icon"></i
+                ></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="salaire"
+                  id="salaire"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-12 col-xs-12">
+          <div class="text-center">
+            <div id="Picture">
+              <img
+                class="picture"
+                id="image"
+                src="../../../../assets/img/imgsys/scheduleBackground.png"
+                alt="Pict"
+              />
+              <div class="row my-2" id="Load">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <div class="Sel row">
+                    <span class="mt-1"><i class="fa fa-camera"></i></span>
+                    <div class="Sel">
+                      <input
+                        class="btn btn-primary"
+                        type="button"
+                        value="Choisir image"
+                        onclick="document.getElementById('selectedFile').click();"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <input
+                  type="file"
+                  id="selectedFile"
+                  style="display: none"
+                  class="form-control"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 text-center mt-1">
+      <input
+        type="submit"
+        value="Ajouter"
+        class="btn btn-primary"
+        id="submit"
+      />
+    </div>
+  </div>
+</form> -->

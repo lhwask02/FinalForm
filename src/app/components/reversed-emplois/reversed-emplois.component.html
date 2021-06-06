@@ -1,0 +1,128 @@
+<form method="" class="container">
+  <div class="row justify-content-center">
+    <h1 class="col-md-12 col-sm-12 col-xs-12 text-center my-3">
+      Gerer les emplois de temps
+    </h1>
+    <div class="col-md-6 col-sm-12 col-xs-12">
+      <label class="fw-bold">Filtrer par:</label>
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-book icon"></i>
+        </span>
+        <select
+          class="form-select w-75"
+          id="apprentissage"
+          (change)="onChange($event)"
+        >
+          <option>Groupe</option>
+          <option>Salle</option>
+          <option>Enseignant</option>
+          <option>Jour</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12 col-xs-12">
+      <label class="fw-bold">Filtrer par:</label>
+      <div class="input-group">
+        <span class="input-group-text">
+          <i class="fa fa-book icon"></i>
+        </span>
+        <select class="form-select w-75">
+          <option *ngFor="let op of ListDeFilter; let i = index">
+            {{ op }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <h1 class="col-md-12 col-sm-12 col-xs-12 text-center my-3">
+      Emploi du temps
+    </h1>
+
+    <div id="" class="col-md-10 col-sm-12 col-xs-12">
+      <table id="" class="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th *ngFor="let day of days; let j = index">{{ day }}</th>
+          </tr>
+        </thead>
+        <tbody id="tbdy">
+          <tr *ngFor="let tim of empl; let i = index">
+            <td *ngIf="i % 2 == 0" id="{{ 300 - i }}" class="Timing">
+              {{ tim }}h-{{ tim + 1 }}h
+            </td>
+            <td
+              *ngFor="let day of days; let j = index"
+              id=" {{ i * 10 + j + 1000 }}"
+              (click)="divclicked(i * 10 + j + 1000)"
+            ></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="InfoSeance" class="col-md-4 col-sm-12 col-xs-12">
+      <img src="../../../../assets/img/imgsys/icons/close.png" alt="Delete" />
+      <i class="fa fa-tag icon" (click)="EditSeance()"> </i>
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">DE 8 A 12</div>
+        <div class="col-md-12 col-sm-12 col-xs-12">PROF:MR.SAAD</div>
+        <div class="col-md-12 col-sm-12 col-xs-12">MODULE:MATH</div>
+        <div class="col-md-12 col-sm-12 col-xs-12">GROUPE :CE4A</div>
+      </div>
+    </div>
+    <div id="edit" class="col-md-4 col-sm-12 col-xs-12" style="display: none">
+      <div class="row justify-content-center">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <span>HeurDebut</span
+          ><select>
+            <option *ngFor="let opt of time">{{ opt }}</option>
+          </select>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <span>Duree</span>
+          <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+          <select>
+            <option>00</option>
+            <option>30</option>
+          </select>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          Groupes
+          <select>
+            <option>CE7</option>
+            <option>CE8</option>
+          </select>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          Matier :<input type="text" />
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          Enseignant :<input type="text" />
+        </div>
+        <div class="col-md-3 col-sm-12 col-xs-12">
+          <input
+            value="Enregistrer"
+            type="button"
+            class="btn btn-primary"
+            (click)="Enregistrer()"
+          />
+        </div>
+        <div class="col-md-3 col-sm-12 col-xs-12">
+          <input
+            value="Supprimer"
+            type="button"
+            class="btn btn-primary"
+            (click)="Supprimer()"
+          />
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12"></div>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,28 @@
+<div id="topMenu" class="bg-primary">
+  <ul id="menu">
+    <li id=""><i class="fa fa-bars"></i></li>
+    <li routerLink="/" class="menuPage">
+      <img
+        src="../../../assets/img/imgsys/icons/white_home.png"
+        class="lefticons"
+      />Accueil
+    </li>
+    <!-- <li>Accueil</li>
+    <li>Deconnecter</li> -->
+  </ul>
+  <!-- <ul id="user">
+    <li>username</li>
+    <li>
+      <img
+        src="../../../assets/img/other/user.png"
+        alt="user"
+        style="height: 50px; margin-top: -5px"
+      />
+    </li>
+  </ul> -->
+
+  <div *ngIf="menu">
+    <app-left-menu></app-left-menu>
+  </div>
+</div>
+<!-- ☰ -->

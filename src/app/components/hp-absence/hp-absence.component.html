@@ -1,0 +1,87 @@
+<div id="content">
+  <h1>Historique de Présence</h1>
+  <form method="post">
+    <!--div class='switch'><label class='choice selected' id='presence'>Présence</label><label class='choice' id='absence'>Absence</label></div-->
+    <div class="inputs">
+      <label class="flabel">Matricule </label>
+      <div>
+        <i class="fa fa-id-card icon"></i><input type="text" id="matricule" />
+      </div>
+    </div>
+    <div class="inputs">
+      <label class="flabel">Groupe </label>
+      <div>
+        <i class="fa fa-id-card icon"></i
+        ><select id="groupe">
+          <option id="aucun">Aucun</option>
+          <option id="39">CP</option>
+          <option id="38">CE2</option>
+          <option id="36">CE5</option>
+          <option id="35">CE3 B</option>
+          <option id="34">CE3 A</option>
+        </select>
+      </div>
+    </div>
+    <div class="inputs">
+      <label class="flabel">De : </label>
+      <div>
+        <i class="fa fa-id-card icon"></i><input type="date" id="from" />
+      </div>
+    </div>
+    <div class="inputs">
+      <label class="flabel">A : </label>
+      <div><i class="fa fa-id-card icon"></i><input type="date" id="to" /></div>
+    </div>
+    <div class="inputs">
+      <label class="flabel">Présence </label>
+      <div>
+        <i class="fa fa-id-card icon"></i
+        ><select id="etat">
+          <option id="tout">Tout</option>
+          <option id="present">présent(e)</option>
+          <option id="absent">absent(e)</option>
+        </select>
+      </div>
+    </div>
+    <div class="inputs1 cent">
+      <input type="button" id="submit" value="AFFICHER" />
+    </div>
+    <table class="liste">
+      <tr>
+        <th><input type="checkbox" id="selectAll" /></th>
+        <th>Adherent</th>
+        <th>Période</th>
+        <th>Temps</th>
+        <th>Etat</th>
+      </tr>
+      <tr id="20">
+        <td><input type="checkbox" class="selection" /></td>
+        <td class="adherent" editable="yes">Mohammadi ilyas</td>
+        <td class="periode" editable="yes">Matin du 31/05/2021</td>
+        <td class="temps" editable="yes">-</td>
+        <td class="etat" editable="options">absent(e)</td>
+      </tr>
+      <tr id="19">
+        <td><input type="checkbox" class="selection" /></td>
+        <td class="adherent" editable="yes">Samihi Reda</td>
+        <td class="periode" editable="yes">Matin du 31/05/2021</td>
+        <td class="temps" editable="yes">-</td>
+        <td class="etat" editable="options">absent(e)</td>
+      </tr>
+      <tr id="23">
+        <td><input type="checkbox" class="selection" /></td>
+        <td class="adherent" editable="yes">Aamiri Zineb</td>
+        <td class="periode" editable="yes">Matin du 31/05/2021</td>
+        <td class="temps" editable="yes">-</td>
+        <td class="etat" editable="options">absent(e)</td>
+      </tr>
+    </table>
+  </form>
+  <div>
+    <div class="inputs1 cent">
+      <input type="button" value="INFORMER" id="informer" />
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/group/getpresence.js"></script>
+</div>

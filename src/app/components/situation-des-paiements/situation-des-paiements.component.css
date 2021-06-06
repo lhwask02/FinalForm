@@ -1,0 +1,20 @@
+#paiemodal
+{
+top: 5%;
+left: 10%;
+}
+#closeWin
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media screen and (min-width: 1024px) {
+    #paiemodal {
+        padding-left: 10%; 
+        padding-right: 10%; 
+    }
+   
+  
+  }

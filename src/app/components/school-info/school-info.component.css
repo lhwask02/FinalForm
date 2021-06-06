@@ -1,0 +1,10 @@
+.form-control
+{border-radius: 10px;}
+img{
+    width: 120px;
+    height: 120px;
+}
+label
+{
+    text-align: left;
+}
